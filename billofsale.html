@@ -1,182 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bill of Sale: Auto &amp; As-Is — Privacy Policy &amp; Terms of Service</title>
-  <style>
-    :root {
-      --bg: #070a12;
-      --card: #111827;
-      --border: #1e293b;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --accent: #2563eb;
-      --emerald: #10b981;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      padding: 32px 16px 64px;
-    }
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 36px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border);
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(37, 99, 235, 0.15);
-      color: #60a5fa;
-      border: 1px solid rgba(37, 99, 235, 0.35);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 999px;
-      margin-bottom: 12px;
-      letter-spacing: 0.04em;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 8px;
-      color: #fff;
-    }
-    .subtitle {
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .section-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      margin-bottom: 24px;
-    }
-    h2 {
-      font-size: 20px;
-      color: #60a5fa;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    h3 {
-      font-size: 16px;
-      color: #f1f5f9;
-      margin: 18px 0 8px;
-    }
-    p, li {
-      color: #cbd5e1;
-      font-size: 14.5px;
-      margin-bottom: 12px;
-    }
-    ul {
-      margin-left: 20px;
-      margin-bottom: 12px;
-    }
-    .highlight-box {
-      background: rgba(16, 185, 129, 0.08);
-      border-left: 4px solid var(--emerald);
-      padding: 14px 18px;
-      border-radius: 4px;
-      margin: 16px 0;
-    }
-    .highlight-box p {
-      color: #a7f3d0;
-      margin: 0;
-    }
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-    }
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bill of Sale: Auto &amp; As-Is for Android | ObAppStudio</title>
+  <meta name="description" content="Fill in a bill of sale for a car or another item, capture the buyer’s and seller’s signatures on screen and export the agreement as PDF. Check local rules: some sales need official forms or a notary.">
+  <link rel="canonical" href="https://oguzhanbilgi.github.io/obappstudio-legal/billofsale.html">
+  <meta name="theme-color" content="#070a12">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="theme-billofsale">
   <div class="container">
-    <header>
-      <span class="badge">LEGAL COMPLIANCE &amp; DATA PRIVACY</span>
-      <h1>Bill of Sale: Auto &amp; As-Is</h1>
-      <p class="subtitle">Official Privacy Policy &amp; Terms of Service (Gizlilik Politikası ve Kullanım Koşulları)</p>
-      <p class="subtitle" style="margin-top: 4px;">Last updated: October 2026</p>
+    <nav class="topbar" aria-label="Site">
+      <a class="brand" href="index.html">ObAppStudio</a>
+      <div class="navlinks">
+        <a href="billofsale.html" aria-current="page">Bill of Sale</a>
+        <a href="billofsale-privacy.html">Privacy</a>
+        <a href="billofsale-terms.html">Terms</a>
+      </div>
+    </nav>
+    <main>
+    <header class="hub-head">
+      <div class="app-icon large"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+      <div>
+        <h1>Bill of Sale: Auto &amp; As-Is</h1>
+        <p class="meta">Private sale agreements for vehicles and other items · <span lang="tr">Araç ve diğer eşyalar için satış sözleşmesi</span></p>
+      </div>
     </header>
 
-    <div class="section-card">
-      <h2>🇺🇸 Privacy Policy (English)</h2>
-      
-      <div class="highlight-box">
-        <p><strong>Summary:</strong> Bill of Sale: Auto &amp; As-Is is built with an offline-first privacy architecture. All vehicle contracts, buyer/seller personal identities, VINs, addresses, and digital signatures remain strictly on your local device storage.</p>
-      </div>
-
-      <h3>1. Information We Do Not Collect</h3>
-      <p>We do not operate remote servers to store or monitor private contracts created in the app. Your full legal names, physical addresses, driver's license numbers, vehicle identification numbers (VINs), transaction sale prices, and digital signature records are stored exclusively in your local device SQLite database.</p>
-
-      <h3>2. Third-Party Services &amp; Advertising ID</h3>
-      <p>The application integrates compliant third-party software development kits (SDKs):</p>
-      <ul>
-        <li><strong>Google Mobile Ads (AdMob):</strong> For non-subscribers, AdMob may access standard advertising identifiers (Google Advertising ID / AAID) to deliver relevant advertisements and fraud prevention in accordance with Google Play Developer Policies.</li>
-        <li><strong>Google Play Billing &amp; RevenueCat:</strong> Subscription purchases and lifetime passes are handled directly and securely through Google Play In-App Billing. We never receive or store your credit card or financial payment details.</li>
-      </ul>
-
-      <h3>3. Permissions Used</h3>
-      <ul>
-        <li><code>INTERNET</code>: Required for Google AdMob banner display and Google Play subscription verification.</li>
-        <li><code>ACCESS_NETWORK_STATE</code>: Used to determine online/offline status gracefully.</li>
-        <li><code>POST_NOTIFICATIONS</code>: Optional permission to notify you about saved deals or export status.</li>
-        <li><code>AD_ID</code>: Declared for Google Advertising ID on Android 13+ devices.</li>
-      </ul>
-
-      <h3>4. Data Retention and Deletion</h3>
-      <p>Because all legal documents are kept locally, you have total control over your data. Deleting a transaction or uninstalling the app permanently purges all saved contracts, buyer/seller names, and digital signatures from your device.</p>
-
-      <h3>5. Contact Us</h3>
-      <p>For any privacy inquiries or legal support, contact: <a href="mailto:oguzhanbilgidev@gmail.com">oguzhanbilgidev@gmail.com</a></p>
+    <div class="hub-actions">
+      <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.mobilefactory.billofsale" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
     </div>
 
-    <div class="section-card">
-      <h2>🇹🇷 Gizlilik Politikası (Türkçe)</h2>
-      
-      <div class="highlight-box">
-        <p><strong>Özet:</strong> Bill of Sale uygulaması tamamen yerel (offline-first) mimariyle geliştirilmiştir. Sözleşmeleriniz, alıcı/satıcı kimlik bilgileri ve dijital imzalarınız sadece kendi telefonunuzda saklanır.</p>
-      </div>
+    <section class="legal-grid" aria-label="Legal documents">
+      <a class="legal-link" href="billofsale-privacy.html"><strong>Privacy Policy</strong><span lang="tr">Gizlilik Politikası</span></a>
+      <a class="legal-link" href="billofsale-terms.html"><strong>Terms of Use</strong><span lang="tr">Kullanım Koşulları</span></a>
+    </section>
 
-      <h3>1. Toplanan ve Toplanmayan Veriler</h3>
-      <p>Kullanıcılarımızın araç satış sözleşmelerinde paylaştığı ad-soyad, adres, T.C. kimlik/ehliyet numarası, şasi numarası ve dijital ıslak imzalar hiçbir harici sunucuya iletilmez ve toplanmaz. Tüm veriler telefonunuzun güvenli yerel SQLite veri tabanında saklanır.</p>
-
-      <h3>2. Reklam Kimliği ve Üçüncü Taraf Servisler</h3>
-      <ul>
-        <li><strong>Google AdMob:</strong> Ücretsiz kullanıcılara reklam sunulması ve sahtekarlık önleme amacıyla Google Reklam Kimliği (Advertising ID / AAID) kullanılabilir.</li>
-        <li><strong>Google Play Faturalandırma:</strong> PRO abonelik satın alımları doğrudan Google Play güvenli ödeme altyapısıyla gerçekleştirilir. Kredi kartı bilgileriniz geliştirici tarafından asla görülemez ve saklanmaz.</li>
+    <section class="card" id="en" lang="en">
+      <h2>About the app</h2>
+      <p>Fill in a bill of sale for a car or another item, capture the buyer’s and seller’s signatures on screen and export the agreement as PDF. Check local rules: some sales need official forms or a notary.</p>
+      <ul class="features">
+        <li>Seller, buyer and vehicle details, including VIN and odometer</li>
+        <li>As-is sale wording you can review</li>
+        <li>On-screen signatures for both parties</li>
+        <li>PDF export and sharing</li>
       </ul>
+      <h3>Privacy at a glance</h3>
+      <ul>
+        <li>No account is needed. Your records are stored only on your device.</li>
+        <li>The free version shows Google AdMob ads. Google may use your advertising ID and device data for ads; in the EEA, UK and Switzerland you are asked for consent first.</li>
+        <li>Purchases go through Google Play. RevenueCat verifies Pro access with an anonymous ID.</li>
+        <li>You can erase everything at any time with Settings → “Delete all local data”.</li>
+      </ul>
+      <p>Read the full <a href="billofsale-privacy.html">Privacy Policy</a> and <a href="billofsale-terms.html">Terms of Use</a>.</p>
+    </section>
 
-      <h3>3. İletişim</h3>
-      <p>Gizlilik ile ilgili her türlü soru ve talebiniz için: <a href="mailto:oguzhanbilgidev@gmail.com">oguzhanbilgidev@gmail.com</a></p>
-    </div>
+    <section class="card" id="tr" lang="tr">
+      <h2>Uygulama hakkında</h2>
+      <p>Araç veya başka bir eşya için satış sözleşmesi doldurun, alıcı ve satıcı imzalarını ekranda alın ve sözleşmeyi PDF olarak dışa aktarın. Yerel kuralları kontrol edin: bazı satışlar resmi form veya noter gerektirir.</p>
+      <ul class="features">
+        <li>Satıcı, alıcı ve araç bilgileri (şasi numarası ve kilometre dahil)</li>
+        <li>Gözden geçirebileceğiniz “olduğu gibi” satış metni</li>
+        <li>İki taraf için ekranda imza</li>
+        <li>PDF olarak dışa aktarma ve paylaşma</li>
+      </ul>
+      <h3>Kısaca gizlilik</h3>
+      <ul>
+        <li>Hesap gerekmez. Kayıtlarınız yalnızca cihazınızda saklanır.</li>
+        <li>Ücretsiz sürüm Google AdMob reklamları gösterir. Google reklam kimliğinizi ve cihaz verilerinizi reklam amacıyla kullanabilir; AEA, Birleşik Krallık ve İsviçre’de önce onayınız istenir.</li>
+        <li>Satın alımlar Google Play üzerinden yapılır. RevenueCat, Pro erişimini anonim bir kimlikle doğrular.</li>
+        <li>Ayarlar → “Tüm yerel verileri sil” ile her şeyi istediğiniz zaman silebilirsiniz.</li>
+      </ul>
+      <p><a href="billofsale-privacy.html#tr">Gizlilik Politikası</a> ve <a href="billofsale-terms.html#tr">Kullanım Koşulları</a> metninin tamamını okuyun.</p>
+    </section>
 
-    <footer>
-      <p>&copy; 2026 ObAppStudio. All rights reserved.</p>
+    <section class="card">
+      <h2>Support · <span lang="tr">Destek</span></h2>
+      <p>Email / <span lang="tr">E-posta</span>: <a href="mailto:oguzhanbilgidev@gmail.com">oguzhanbilgidev@gmail.com</a></p>
+      <p>Android package / <span lang="tr">Paket adı</span>: <code>com.mobilefactory.billofsale</code></p>
+    </section>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 ObAppStudio · <a href="index.html">All apps</a> · <a href="privacy.html">Studio privacy policy</a> · <a href="mailto:oguzhanbilgidev@gmail.com">oguzhanbilgidev@gmail.com</a></p>
     </footer>
   </div>
 </body>

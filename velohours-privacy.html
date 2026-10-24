@@ -1,127 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy & Terms of Service — VeloHours: Work Hours &amp; Pay</title>
-  <style>
-    :root {
-      --bg: #070B14;
-      --card: #0E1526;
-      --border: #1E293B;
-      --text: #F8FAFC;
-      --muted: #94A3B8;
-      --brand: #3B82F6;
-      --accent: #10B981;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      margin: 0;
-      padding: 40px 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    }
-    h1 {
-      font-size: 28px;
-      font-weight: 900;
-      color: #FFFFFF;
-      margin-top: 0;
-      letter-spacing: -0.5px;
-    }
-    .badge {
-      display: inline-block;
-      padding: 4px 12px;
-      background: rgba(59, 130, 246, 0.15);
-      border: 1px solid rgba(59, 130, 246, 0.4);
-      color: var(--brand);
-      border-radius: 9999px;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-    h2 {
-      font-size: 18px;
-      font-weight: 800;
-      color: #FFFFFF;
-      margin-top: 28px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px;
-    }
-    p, li {
-      color: var(--muted);
-      font-size: 14px;
-    }
-    strong {
-      color: #FFFFFF;
-    }
-    .contact-card {
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 30px;
-    }
-    .contact-card p {
-      margin: 0;
-      color: #E2E8F0;
-    }
-    a {
-      color: var(--brand);
-      text-decoration: none;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VeloHours Privacy Policy | ObAppStudio</title>
+  <meta name="description" content="How VeloHours for Android handles your data: records stay on your device, Google AdMob ads, Google Play purchases verified by RevenueCat. English and Turkish.">
+  <link rel="canonical" href="https://oguzhanbilgi.github.io/obappstudio-legal/velohours-privacy.html">
+  <meta name="theme-color" content="#070a12">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="theme-velohours">
   <div class="container">
-    <div class="badge">VeloHours Official Legal Document</div>
-    <h1>Privacy Policy &amp; Terms of Use</h1>
-    <p>Last updated: October 23, 2026 &bull; Effective Date: October 23, 2026</p>
+    <nav class="topbar" aria-label="Site">
+      <a class="brand" href="index.html">ObAppStudio</a>
+      <div class="navlinks">
+        <a href="velohours.html">VeloHours</a>
+        <a href="velohours-privacy.html" aria-current="page">Privacy</a>
+        <a href="velohours-terms.html">Terms</a>
+      </div>
+    </nav>
+    <main>
+    <header class="page-head">
+      <p class="pill">Privacy Policy · <span lang="tr">Gizlilik Politikası</span></p>
+      <h1>VeloHours Privacy Policy</h1>
+      <p class="meta">Effective date: 24 October 2026 · <span lang="tr">Yürürlük tarihi: 24 Ekim 2026</span></p>
+      <p class="meta">Android package: <code>com.mobilefactory.velohours</code></p>
+      <p class="lang-switch"><a href="#en">English</a><a href="#tr" lang="tr">Türkçe</a></p>
+    </header>
 
-    <h2>1. Overview &amp; Offline-First Architecture</h2>
-    <p>
-      <strong>VeloHours: Work Hours &amp; Pay</strong> (referred to as "we", "us", or "the App") is developed by ObAppStudio.
-      We believe that your work hours, hourly rates, clients, and financial earnings are completely private.
-      VeloHours is built with an <strong>offline-first architecture</strong>: all shifts, timer logs, and worker profiles are stored exclusively on your local device (via SQLite) and are never transmitted to our servers.
-    </p>
+    <section class="card" id="en" lang="en">
+      <h2>Privacy Policy</h2>
+      <div class="summary">
+        <p><strong>In short</strong></p>
+        <ul>
+          <li>No account is needed. Everything you enter in VeloHours is stored only on your device.</li>
+          <li>We do not run a server that receives your records, and we do not sell personal data.</li>
+          <li>The free version shows Google AdMob ads. Google may collect device and usage data for ads, as explained in section 4.</li>
+          <li>Purchases are processed by Google Play. RevenueCat verifies Pro access using an anonymous ID.</li>
+        </ul>
+      </div>
 
-    <h2>2. Data Collection and Usage</h2>
-    <p>
-      We do not require you to create an account, log in, or provide personal credentials.
-      Information you enter (such as worker name, hourly wages, client names, and notes) remains on your phone.
-      When you generate an official PDF timesheet, the document is rendered locally on your device and shared directly via your chosen sharing method (such as WhatsApp, Email, or Print).
-    </p>
+      <h3>1. Who we are</h3>
+      <p>VeloHours (“the app”) is an Android app published by ObAppStudio (“we”, “us”). This policy explains what information the app handles, where it is stored and who receives it. It applies to the app with the package name <code>com.mobilefactory.velohours</code>.</p>
 
-    <h2>3. In-App Purchases &amp; Subscriptions</h2>
-    <p>
-      VeloHours offers optional Pro upgrades (such as Lifetime Pro or Annual access) to unlock unlimited timesheet exports and remove ads.
-      All payments are processed securely by <strong>Google Play Billing</strong> and validated via <strong>RevenueCat</strong>.
-      We do not have access to your credit card, debit card, or banking details.
-    </p>
+      <h3>2. Information you enter, stored only on your device</h3>
+      <p>The app works offline-first. You enter the information below yourself, and the app saves it in a SQLite database in its private storage on your device. It is used only to provide the app’s features — tracking your working hours and creating your timesheets — and it is never sent to us.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Category</th><th scope="col">What it includes</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">Worker profile</th><td>Your name, trade, phone number, email address and bank details (such as IBAN) that you choose to show on timesheets</td></tr>
+          <tr><th scope="row">Clients</th><td>Client names and the hourly rates you set for them</td></tr>
+          <tr><th scope="row">Shifts</th><td>Dates, start and end times, durations and other shift details you record</td></tr>
+          <tr><th scope="row">Exports</th><td>Timesheet PDF and CSV files created on your device when you export</td></tr>
+          <tr><th scope="row">App settings</th><td>Preferences such as language, and whether Pro is active</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Android system backup: depending on your device settings, Android may include app data in your personal device backup to your Google account. That backup is controlled by you and Google; we cannot access it.</p>
 
-    <h2>4. Advertising (Google AdMob)</h2>
-    <p>
-      The free version of VeloHours displays non-intrusive mobile banner and rewarded ads via <strong>Google AdMob</strong>.
-      AdMob may use anonymized advertising identifiers (such as Google Advertising ID) in compliance with Google Play Policies. You can upgrade to Pro at any time to permanently remove all advertisements.
-    </p>
+      <h3>3. Sharing happens only when you choose</h3>
+      <p>When you export a timesheet as PDF or CSV and tap Share, Android’s share sheet sends the file to the app or person you pick — for example WhatsApp, email or a printer.</p>
+      <p>We do not receive a copy of anything you share. Once shared, files and messages are handled under the privacy terms of the recipient and of the app you used.</p>
 
-    <h2>5. Contact Information</h2>
-    <div class="contact-card">
-      <p><strong>ObAppStudio Legal &amp; Support</strong></p>
-      <p style="margin-top: 6px;">Email: <a href="mailto:oguzhanbilgi.dev@gmail.com">oguzhanbilgi.dev@gmail.com</a></p>
-      <p>Developer Website: <a href="https://oguzhanbilgi.github.io/obappstudio-legal/">https://oguzhanbilgi.github.io/obappstudio-legal/</a></p>
-    </div>
+      <h3>4. Advertising (Google AdMob)</h3>
+      <p>The free version of the app shows banner, interstitial and rewarded ads from Google AdMob. To show and measure ads, and for analytics and fraud prevention, Google may collect:</p>
+      <ul>
+        <li>your device’s advertising ID;</li>
+        <li>your IP address and an approximate location derived from it;</li>
+        <li>device information, such as model, operating system and language;</li>
+        <li>app interaction information, such as ads viewed and tapped.</li>
+      </ul>
+      <p>Depending on your consent and settings, ads may be personalised or non-personalised. If you are in the European Economic Area, the United Kingdom or Switzerland, you are asked for your choice through Google’s consent form (User Messaging Platform) and can change it at any time in the app under Settings → “Ad privacy choices”. You can also reset or delete your advertising ID in your Android device settings.</p>
+      <p>We do not pass the records you enter to Google for advertising. Learn more: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use its services</a>.</p>
+
+      <h3>5. In-app purchases (Google Play Billing and RevenueCat)</h3>
+      <p>Pro features are sold through Google Play. Payments are processed by Google Play Billing under Google’s terms and privacy policy; we never see your card number or other payment details.</p>
+      <p>To verify whether Pro is active, the app uses RevenueCat, which processes:</p>
+      <ul>
+        <li>an anonymous app user ID created by the app (not your name or email address);</li>
+        <li>your purchase history for this app, such as the product, purchase date and purchase token;</li>
+        <li>device and platform information, such as operating system and app version.</li>
+      </ul>
+      <p>See the <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat privacy policy</a>.</p>
+
+      <h3>6. What we do not do</h3>
+      <ul>
+        <li>We do not require or offer user accounts.</li>
+        <li>We do not run servers that receive the records you create.</li>
+        <li>We do not sell or rent personal data.</li>
+        <li>We do not use your records for advertising.</li>
+      </ul>
+
+      <h3>7. Information about other people</h3>
+      <p>If you record information about other people, such as client names, make sure you are allowed to do so and record only what you need.</p>
+
+      <h3>8. Keeping and deleting your data</h3>
+      <p>Your records stay on your device until you delete them. You can delete individual records in the app, or erase everything with Settings → “Delete all local data”. Uninstalling the app also removes its data from the device. Files you have already exported or shared are not affected and must be deleted separately. Data processed by Google and RevenueCat is kept according to their own policies.</p>
+
+      <h3>9. Security</h3>
+      <p>Your records are kept in the app’s private storage, which other apps cannot normally read. Anyone who can unlock your phone can open the app, so protect your device with a screen lock. Exported timesheets can contain your bank details, so share them only with people you trust.</p>
+
+      <h3>10. Your choices and rights</h3>
+      <p>Because we do not hold your records, you can view, correct, export and delete them directly in the app. Depending on where you live — for example under the EU or UK GDPR or Turkey’s Personal Data Protection Law No. 6698 (KVKK) — you may have rights to access, correct or delete personal data, or to object to its processing. For data processed by Google or RevenueCat, use the controls described above or contact those companies. You can also write to us and we will help where we can.</p>
+
+      <h3>11. Children</h3>
+      <p>The app is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
+
+      <h3>12. Changes to this policy</h3>
+      <p>We may update this policy when the app changes. The new version will be published on this page with a new effective date.</p>
+
+      <h3>13. Contact</h3>
+      <p>ObAppStudio — <a href="mailto:oguzhanbilgidev@gmail.com">oguzhanbilgidev@gmail.com</a></p>
+    </section>
+
+    <section class="card" id="tr" lang="tr">
+      <h2>Gizlilik Politikası</h2>
+      <div class="summary">
+        <p><strong>Kısaca</strong></p>
+        <ul>
+          <li>Hesap gerekmez. Uygulamaya girdiğiniz her şey yalnızca cihazınızda saklanır.</li>
+          <li>Kayıtlarınızı alan bir sunucu işletmiyoruz ve kişisel verileri satmıyoruz.</li>
+          <li>Ücretsiz sürüm Google AdMob reklamları gösterir. Google, 4. bölümde açıklandığı gibi reklam amacıyla cihaz ve kullanım verileri toplayabilir.</li>
+          <li>Satın alımlar Google Play tarafından işlenir. RevenueCat, Pro erişimini anonim bir kimlikle doğrular.</li>
+        </ul>
+      </div>
+
+      <h3>1. Biz kimiz</h3>
+      <p>VeloHours (“uygulama”), ObAppStudio (“biz”) tarafından yayınlanan bir Android uygulamasıdır. Bu politika, uygulamanın hangi bilgileri işlediğini, bu bilgilerin nerede saklandığını ve kimlere ulaştığını açıklar. Politika, <code>com.mobilefactory.velohours</code> paket adlı uygulama için geçerlidir.</p>
+
+      <h3>2. Girdiğiniz ve yalnızca cihazınızda saklanan bilgiler</h3>
+      <p>Uygulama çevrimdışı öncelikli çalışır. Aşağıdaki bilgileri siz girersiniz; uygulama bunları cihazınızda, kendi özel depolama alanındaki bir SQLite veritabanına kaydeder. Bu bilgiler yalnızca uygulamanın işlevleri için — çalışma saatlerinizi takip etmek ve puantajlarınızı oluşturmak — kullanılır ve bize hiçbir zaman gönderilmez.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Kategori</th><th scope="col">İçerik</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">Çalışan profili</th><td>Adınız, mesleğiniz, telefon numaranız, e-posta adresiniz ve puantajlarda göstermeyi seçtiğiniz banka bilgileri (IBAN gibi)</td></tr>
+          <tr><th scope="row">Müşteriler</th><td>Müşteri adları ve onlar için belirlediğiniz saatlik ücretler</td></tr>
+          <tr><th scope="row">Vardiyalar</th><td>Kaydettiğiniz tarihler, başlangıç ve bitiş saatleri, süreler ve diğer vardiya bilgileri</td></tr>
+          <tr><th scope="row">Dışa aktarımlar</th><td>Dışa aktardığınızda cihazınızda oluşturulan PDF ve CSV puantaj dosyaları</td></tr>
+          <tr><th scope="row">Uygulama ayarları</th><td>Dil gibi tercihler ve Pro’nun etkin olup olmadığı</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Android sistem yedeklemesi: Cihaz ayarlarınıza bağlı olarak Android, uygulama verilerini Google hesabınıza alınan kişisel cihaz yedeğine dahil edebilir. Bu yedek sizin ve Google’ın kontrolündedir; biz erişemeyiz.</p>
+
+      <h3>3. Paylaşım yalnızca siz seçtiğinizde gerçekleşir</h3>
+      <p>Bir puantajı PDF veya CSV olarak dışa aktarıp Paylaş’a dokunduğunuzda Android paylaşım ekranı dosyayı seçtiğiniz uygulamaya veya kişiye gönderir; örneğin WhatsApp, e-posta veya yazıcı.</p>
+      <p>Paylaştığınız hiçbir şeyin kopyası bize ulaşmaz. Paylaşılan dosya ve mesajlar, alıcının ve kullandığınız uygulamanın gizlilik koşullarına tabidir.</p>
+
+      <h3>4. Reklamlar (Google AdMob)</h3>
+      <p>Uygulamanın ücretsiz sürümü Google AdMob’dan banner, geçiş (interstitial) ve ödüllü (rewarded) reklamlar gösterir. Reklamları göstermek ve ölçmek, analiz yapmak ve sahtekârlığı önlemek için Google şunları toplayabilir:</p>
+      <ul>
+        <li>cihazınızın reklam kimliği;</li>
+        <li>IP adresiniz ve bundan çıkarılan yaklaşık konum;</li>
+        <li>model, işletim sistemi ve dil gibi cihaz bilgileri;</li>
+        <li>görüntülenen ve dokunulan reklamlar gibi uygulama etkileşim bilgileri.</li>
+      </ul>
+      <p>Onayınıza ve ayarlarınıza bağlı olarak reklamlar kişiselleştirilmiş veya kişiselleştirilmemiş olabilir. Avrupa Ekonomik Alanı, Birleşik Krallık veya İsviçre’deyseniz tercihiniz Google’ın onay formu (User Messaging Platform) ile sorulur; bu tercihi istediğiniz zaman uygulamada Ayarlar → “Reklam gizlilik tercihleri” bölümünden değiştirebilirsiniz. Reklam kimliğinizi Android cihaz ayarlarından sıfırlayabilir veya silebilirsiniz.</p>
+      <p>Girdiğiniz kayıtları reklam amacıyla Google’a aktarmayız. Ayrıntılar: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google’ın, hizmetlerini kullanan site ve uygulamalardan gelen bilgileri nasıl kullandığı</a>.</p>
+
+      <h3>5. Uygulama içi satın alımlar (Google Play Faturalandırma ve RevenueCat)</h3>
+      <p>Pro özellikler Google Play üzerinden satılır. Ödemeler, Google’ın koşulları ve gizlilik politikası kapsamında Google Play Faturalandırma tarafından işlenir; kart numaranızı veya diğer ödeme bilgilerinizi hiçbir zaman görmeyiz.</p>
+      <p>Pro’nun etkin olup olmadığını doğrulamak için uygulama RevenueCat’i kullanır. RevenueCat şunları işler:</p>
+      <ul>
+        <li>uygulamanın oluşturduğu anonim bir uygulama kullanıcı kimliği (adınız veya e-posta adresiniz değildir);</li>
+        <li>bu uygulamaya ait satın alma geçmişiniz (ürün, satın alma tarihi ve satın alma belirteci gibi);</li>
+        <li>işletim sistemi ve uygulama sürümü gibi cihaz ve platform bilgileri.</li>
+      </ul>
+      <p>Ayrıntılar için <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat gizlilik politikası</a>.</p>
+
+      <h3>6. Yapmadıklarımız</h3>
+      <ul>
+        <li>Kullanıcı hesabı istemiyor ve sunmuyoruz.</li>
+        <li>Oluşturduğunuz kayıtları alan sunucular işletmiyoruz.</li>
+        <li>Kişisel verileri satmıyor veya kiralamıyoruz.</li>
+        <li>Kayıtlarınızı reklam için kullanmıyoruz.</li>
+      </ul>
+
+      <h3>7. Başka kişilere ait bilgiler</h3>
+      <p>Müşteri adları gibi başka kişilere ait bilgileri kaydediyorsanız bunu yapmaya hakkınız olduğundan emin olun ve yalnızca gerekli olanı kaydedin.</p>
+
+      <h3>8. Verilerin saklanması ve silinmesi</h3>
+      <p>Kayıtlarınız siz silene kadar cihazınızda kalır. Tek tek kayıtları uygulama içinden silebilir ya da Ayarlar → “Tüm yerel verileri sil” ile her şeyi silebilirsiniz. Uygulamayı kaldırdığınızda uygulamanın verileri de cihazdan silinir. Daha önce dışa aktardığınız veya paylaştığınız dosyalar bundan etkilenmez; bunları ayrıca silmeniz gerekir. Google ve RevenueCat tarafından işlenen veriler, bu şirketlerin kendi politikalarına göre saklanır.</p>
+
+      <h3>9. Güvenlik</h3>
+      <p>Kayıtlarınız, diğer uygulamaların normalde okuyamadığı, uygulamaya özel depolama alanında tutulur. Telefonunuzun kilidini açabilen herkes uygulamayı da açabilir; bu nedenle cihazınızı ekran kilidiyle koruyun. Dışa aktarılan puantajlar banka bilgilerinizi içerebilir; bunları yalnızca güvendiğiniz kişilerle paylaşın.</p>
+
+      <h3>10. Tercihleriniz ve haklarınız</h3>
+      <p>Kayıtlarınızı biz tutmadığımız için onları doğrudan uygulamada görüntüleyebilir, düzeltebilir, dışa aktarabilir ve silebilirsiniz. Yaşadığınız yere bağlı olarak — örneğin 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) veya AB ya da Birleşik Krallık GDPR kapsamında — kişisel verilere erişme, bunları düzeltme veya sildirme ve işlenmelerine itiraz etme haklarınız olabilir. Google veya RevenueCat tarafından işlenen veriler için yukarıda açıklanan kontrolleri kullanabilir ya da bu şirketlerle iletişime geçebilirsiniz. Bize de yazabilirsiniz; elimizden geldiğince yardımcı oluruz.</p>
+
+      <h3>11. Çocuklar</h3>
+      <p>Uygulama 13 yaşından küçük çocuklara yönelik değildir ve çocuklardan bilerek kişisel bilgi toplamayız.</p>
+
+      <h3>12. Bu politikadaki değişiklikler</h3>
+      <p>Uygulama değiştiğinde bu politikayı güncelleyebiliriz. Yeni sürüm, yeni yürürlük tarihiyle bu sayfada yayımlanır.</p>
+
+      <h3>13. İletişim</h3>
+      <p>ObAppStudio — <a href="mailto:oguzhanbilgidev@gmail.com">oguzhanbilgidev@gmail.com</a></p>
+    </section>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 ObAppStudio · <a href="index.html">All apps</a> · <a href="privacy.html">Studio privacy policy</a> · <a href="mailto:oguzhanbilgidev@gmail.com">oguzhanbilgidev@gmail.com</a></p>
+    </footer>
   </div>
 </body>
 </html>
