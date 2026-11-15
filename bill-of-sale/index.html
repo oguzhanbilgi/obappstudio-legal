@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Bill of Sale Generator – Car, Boat &amp; Trailer (PDF)</title>
+  <meta name="description" content="Fill in a free bill of sale for a car, motorcycle, boat, trailer or other item and print it or save it as a PDF. Runs in your browser; nothing is uploaded.">
+  <link rel="canonical" href="https://oguzhanbilgi.github.io/obappstudio-legal/bill-of-sale/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#070a12" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Bill of Sale Generator – Car, Boat &amp; Trailer (PDF)">
+  <meta property="og:description" content="Fill in a bill of sale for a car, motorcycle, boat, trailer or other item and print it or save it as a PDF. Free, no sign-up, runs in your browser.">
+  <meta property="og:url" content="https://oguzhanbilgi.github.io/obappstudio-legal/bill-of-sale/">
+  <meta property="og:site_name" content="ObAppStudio">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://oguzhanbilgi.github.io/obappstudio-legal/bill-of-sale/#app",
+        "name": "Free Bill of Sale Generator",
+        "url": "https://oguzhanbilgi.github.io/obappstudio-legal/bill-of-sale/",
+        "description": "A free bill of sale template for a car, motorcycle, boat, trailer or other item. Fill it in, check the preview and print it or save it as a PDF. Everything runs in the browser.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ObAppStudio",
+          "email": "oguzhanbilgidev@gmail.com",
+          "url": "https://oguzhanbilgi.github.io/obappstudio-legal/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://oguzhanbilgi.github.io/obappstudio-legal/bill-of-sale/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this bill of sale generator free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. There is no charge and no sign-up. You fill in the form, check the preview and print the document or save it as a PDF. The page runs in your browser: it does not upload or save what you type, sets no cookies and has no trackers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a bill of sale to sell a car?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on your state. Some states ask for a bill of sale when the buyer registers a vehicle bought from a private seller, others only recommend one, and several publish their own form that you are expected to use. Even where it is not required, a signed bill of sale gives both sides a written record of the price, the date and the terms. Check your state's DMV website before you meet the buyer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a bill of sale replace the title?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. For a titled vehicle, boat or trailer, ownership is normally transferred by signing the title over to the buyer and registering the change with the state. A bill of sale records the terms of the sale alongside the title. Keep both, and follow your state's steps for the title transfer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a bill of sale have to be notarized?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on your state and on what is being sold. Some states require a notarized bill of sale or a notarized title for certain sales, and many do not. This page does not notarize anything. If a notary is required where you live, print the document and sign it in front of one."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does \"sold as is\" mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The buyer accepts the item in its current condition, with all known and unknown faults, and the seller gives no warranty after the sale. It does not excuse hiding a known defect or misstating the mileage. If you agree on any warranty, choose the warranty option and write the terms out in full."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use it for a boat, a trailer or another item?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose the item type at the top of the form. For a boat, enter the hull identification number (HIN) and list a motor or trailer included in the sale in the notes. For a trailer, equipment or other goods, use the serial number and a short description. Boats and trailers may also need to be titled or registered, depending on your state."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #070a12;
+      --surface: #111827;
+      --surface-2: #0b1120;
+      --border: #1e293b;
+      --input-bg: #0b1120;
+      --input-border: #334155;
+      --heading: #ffffff;
+      --text: #f8fafc;
+      --body: #cbd5e1;
+      --muted: #94a3b8;
+      --faint: #64748b;
+      --accent: #93c5fd;
+      --accent-strong: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.14);
+      --accent-line: rgba(37, 99, 235, 0.42);
+      --btn-bg: #ffffff;
+      --btn-text: #0f172a;
+      --paper-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+      color-scheme: dark;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --surface-2: #f1f5f9;
+        --border: #e2e8f0;
+        --input-bg: #ffffff;
+        --input-border: #cbd5e1;
+        --heading: #0f172a;
+        --text: #0f172a;
+        --body: #334155;
+        --muted: #475569;
+        --faint: #64748b;
+        --accent: #1d4ed8;
+        --accent-strong: #2563eb;
+        --accent-soft: rgba(37, 99, 235, 0.08);
+        --accent-line: rgba(37, 99, 235, 0.35);
+        --btn-bg: #0f172a;
+        --btn-text: #ffffff;
+        --paper-shadow: 0 6px 28px rgba(15, 23, 42, 0.12);
+        color-scheme: light;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      padding: 24px 16px 64px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    .container { max-width: 980px; margin: 0 auto; }
+    a { color: var(--accent); text-underline-offset: 2px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .topbar {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 8px 16px; padding-bottom: 16px; margin-bottom: 32px; border-bottom: 1px solid var(--border);
+    }
+    .brand { color: var(--text); font-weight: 800; letter-spacing: -0.01em; text-decoration: none; }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; }
+    .navlinks a { color: var(--muted); text-decoration: none; }
+    .navlinks a:hover { color: var(--text); }
+    .navlinks a[aria-current="page"] { color: var(--accent); font-weight: 700; }
+
+    .hero { margin: 8px 0 28px; text-align: center; }
+    .pill {
+      display: inline-block; margin: 0 0 12px; padding: 4px 12px;
+      border: 1px solid var(--accent-line); border-radius: 999px; background: var(--accent-soft);
+      color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 10px; color: var(--heading); font-size: clamp(28px, 5vw, 40px);
+      font-weight: 800; line-height: 1.2; letter-spacing: -0.02em;
+    }
+    .lead { max-width: 680px; margin: 0 auto 8px; color: var(--muted); font-size: 17px; }
+    h2 {
+      margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
+      color: var(--heading); font-size: 22px; line-height: 1.3;
+    }
+    h3 { margin: 22px 0 8px; color: var(--heading); font-size: 16.5px; line-height: 1.4; }
+    p, li { color: var(--body); font-size: 15.5px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    strong { color: var(--text); }
+
+    .card {
+      margin-bottom: 24px; padding: 28px; border: 1px solid var(--border);
+      border-radius: 16px; background: var(--surface);
+    }
+    .notice {
+      display: grid; gap: 4px; margin: 0 0 24px; padding: 14px 18px;
+      border: 1px solid var(--accent-line); border-radius: 12px; background: var(--accent-soft);
+    }
+    .notice p { margin: 0; font-size: 14.5px; }
+
+    /* Form */
+    fieldset {
+      margin: 0 0 20px; padding: 20px; min-width: 0;
+      border: 1px solid var(--border); border-radius: 14px; background: var(--surface-2);
+    }
+    legend { padding: 0 8px; color: var(--heading); font-size: 15px; font-weight: 800; }
+    .fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px 16px; }
+    .fields .wide { grid-column: 1 / -1; }
+    .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 20px; }
+    .field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+    .field label, .label { color: var(--body); font-size: 14px; font-weight: 600; }
+    .opt { color: var(--faint); font-weight: 400; }
+    input[type="text"], input[type="number"], input[type="date"], input[type="tel"], select, textarea {
+      width: 100%; min-height: 42px; padding: 9px 11px;
+      border: 1px solid var(--input-border); border-radius: 10px; background: var(--input-bg);
+      color: var(--text); font: inherit; font-size: 15px;
+    }
+    textarea { min-height: 76px; resize: vertical; }
+    .hint { margin: 0; color: var(--faint); font-size: 13px; }
+    .choices { display: flex; flex-wrap: wrap; gap: 8px; }
+    .choice { position: relative; }
+    .choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .choice span {
+      display: inline-block; padding: 8px 14px; border: 1px solid var(--input-border); border-radius: 999px;
+      background: var(--input-bg); color: var(--body); font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .choice input:checked + span { border-color: var(--accent-strong); background: var(--accent-soft); color: var(--accent); }
+    .choice input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .check-row { display: flex; align-items: flex-start; gap: 10px; color: var(--body); font-size: 14.5px; }
+    .check-row input { width: 18px; height: 18px; margin: 3px 0 0; flex-shrink: 0; accent-color: var(--accent-strong); }
+    .stack { display: grid; gap: 12px; }
+    .radio-list { display: grid; gap: 8px; }
+    output.balance { display: block; padding: 9px 0; color: var(--text); font-weight: 700; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 4px 0 8px; }
+    .btn {
+      display: inline-block; padding: 12px 20px; border: 1px solid transparent; border-radius: 12px;
+      background: var(--btn-bg); color: var(--btn-text); font: inherit; font-size: 15px; font-weight: 800;
+      text-align: center; text-decoration: none; cursor: pointer;
+    }
+    .btn:hover { opacity: 0.92; }
+    .btn.secondary { background: transparent; border-color: var(--input-border); color: var(--body); }
+    .btn.primary { background: var(--accent-strong); color: #ffffff; }
+
+    /* Preview "paper" */
+    .preview-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin: 8px 0 14px; }
+    .preview-head h2 { margin: 0; padding: 0; border: 0; }
+    .paper-wrap { overflow-x: auto; margin-bottom: 12px; }
+    #doc {
+      max-width: 8.5in; margin: 0 auto; padding: 0.6in 0.65in;
+      background: #ffffff; color: #0f172a; border-radius: 4px; box-shadow: var(--paper-shadow);
+      font-family: Georgia, "Times New Roman", serif; font-size: 14px; line-height: 1.5;
+    }
+    #doc * { color: inherit; }
+    #doc p, #doc li { color: #1e293b; font-size: 1em; }
+    .d-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-bottom: 10px; margin-bottom: 4px; border-bottom: 2px solid #1e3a8a; }
+    .d-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 1.85em; font-weight: 800; letter-spacing: -0.01em; color: #1e3a8a !important; line-height: 1.15; }
+    .d-sub { margin-top: 2px; color: #475569 !important; font-size: 0.95em; }
+    .d-meta { font-size: 0.92em; text-align: right; line-height: 1.7; }
+    .d-meta b, .d-row b, .d-kv th { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .d-h { margin: 18px 0 8px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 0.86em; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #1e3a8a !important; }
+    .d-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .d-party { padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; }
+    .d-role { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 0.78em; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #2563eb !important; }
+    .d-name { margin: 2px 0 4px; font-size: 1.12em; font-weight: 700; }
+    .d-row { font-size: 0.92em; line-height: 1.75; }
+    .d-row b { font-size: 0.92em; color: #475569 !important; }
+    .d-kv { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+    .d-kv th, .d-kv td { padding: 5px 9px; border: 1px solid #cbd5e1; text-align: left; vertical-align: top; }
+    .d-kv th { width: 32%; background: #f1f5f9; color: #334155 !important; font-size: 0.88em; font-weight: 700; }
+    .d-mono { font-family: "Courier New", Courier, monospace; font-weight: 700; letter-spacing: 0.06em; }
+    .d-clause { margin: 6px 0; text-align: justify; }
+    .d-odo { margin-top: 12px; padding: 10px 12px; border: 1px solid #94a3b8; border-radius: 6px; break-inside: avoid; page-break-inside: avoid; }
+    .d-odo-title { font-weight: 700; margin-bottom: 4px; }
+    .d-odo-line { margin: 4px 0; }
+    .d-box { display: inline-block; width: 13px; height: 13px; margin-right: 8px; border: 1.5px solid #0f172a; vertical-align: -2px; text-align: center; font: 800 10px/11px -apple-system, "Segoe UI", Arial, sans-serif; }
+    .d-sig { break-inside: avoid; page-break-inside: avoid; }
+    .d-sig-line { height: 52px; border-bottom: 1.5px solid #0f172a; }
+    .d-sig-label { margin-top: 3px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 0.78em; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #475569 !important; }
+    .d-sig-meta { margin-top: 6px; font-size: 0.92em; line-height: 2; }
+    .blank { display: inline-block; min-width: 11em; border-bottom: 1px solid #64748b; }
+    .blank.short { min-width: 6em; }
+    .blank.full { display: block; min-width: 0; width: 100%; height: 1.6em; }
+    .d-disclaimer { margin-top: 22px; padding: 8px 10px; border: 1px solid #e2e8f0; border-radius: 6px; background: #f8fafc; color: #475569 !important; font-size: 0.8em; text-align: center; }
+    .d-credit { margin-top: 6px; color: #94a3b8 !important; font-size: 0.72em; text-align: center; }
+
+    /* App promotion */
+    .app-promo { border-color: var(--accent-line); }
+    .app-promo .features { margin: 0 0 18px; padding: 0; list-style: none; }
+    .app-promo .features li { position: relative; padding-left: 20px; }
+    .app-promo .features li::before {
+      content: ""; position: absolute; top: 0.62em; left: 2px; width: 8px; height: 8px;
+      border-radius: 2px; background: var(--accent-strong);
+    }
+    .sub-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 14px; font-size: 13px; }
+    .sub-links a { color: var(--muted); }
+    .small { color: var(--faint); font-size: 13px; }
+
+    .faq h3 { margin-top: 20px; }
+    .site-footer {
+      margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border);
+      color: var(--faint); font-size: 13px; text-align: center;
+    }
+    .site-footer p { color: var(--faint); font-size: 13px; }
+    .site-footer a { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .card { padding: 20px 16px; }
+      fieldset { padding: 16px 14px; }
+      #doc { padding: 22px 16px; font-size: 13px; }
+      .d-cols { grid-template-columns: 1fr; }
+      .d-meta { text-align: left; }
+      .actions .btn { flex: 1 1 100%; }
+    }
+
+    @media print {
+      @page { size: letter; margin: 0.55in; }
+      :root { color-scheme: light; }
+      html, body { background: #ffffff !important; }
+      body { padding: 0; }
+      .no-print { display: none !important; }
+      .container { max-width: none; }
+      .paper-wrap { overflow: visible; margin: 0; }
+      #doc { max-width: none; padding: 0; box-shadow: none; border-radius: 0; font-size: 10.5pt; }
+      .d-cols { grid-template-columns: 1fr 1fr; }
+      .d-meta { text-align: right; }
+      .d-kv th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      #doc { font-size: 9.5pt; line-height: 1.4; }
+      .d-h { margin: 11px 0 5px; }
+      .d-kv th, .d-kv td { padding: 2px 8px; }
+      .d-party { padding: 6px 10px; }
+      .d-row { line-height: 1.55; }
+      .d-clause { margin: 4px 0; }
+      .d-odo { margin-top: 8px; padding: 6px 10px; }
+      .d-odo-line { margin: 2px 0; }
+      .d-sig-line { height: 40px; }
+      .d-disclaimer { margin-top: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="topbar no-print" aria-label="Site">
+      <a class="brand" href="../index.html">ObAppStudio</a>
+      <div class="navlinks">
+        <a href="../index.html">Apps</a>
+        <a href="./" aria-current="page">Free tools</a>
+        <a href="../billofsale.html">Bill of Sale app</a>
+        <a href="../privacy.html">Privacy</a>
+      </div>
+    </nav>
+
+    <main>
+      <header class="hero no-print">
+        <p class="pill">Free tool · No sign-up</p>
+        <h1>Free Bill of Sale Generator</h1>
+        <p class="lead">Fill in a bill of sale for a car, truck, motorcycle, boat, trailer or any other item you sell privately. Check the preview, then print it or save it as a PDF and sign it in ink.</p>
+      </header>
+
+      <div class="notice no-print" role="note">
+        <p><strong>Everything stays in your browser.</strong> This page sends nothing anywhere, sets no cookies, has no trackers and does not save what you type.</p>
+        <p>This is a template that you and the other party fill in and check yourselves. It is not legal advice. Requirements vary by state, and many states have their own bill of sale form, so check your state's DMV first.</p>
+      </div>
+
+      <section class="no-print" aria-labelledby="form-heading">
+        <h2 id="form-heading">1. Fill in the details</h2>
+        <noscript><p><strong>The generator needs JavaScript to build the preview.</strong> With JavaScript turned off you can still print the blank template below and fill it in by hand.</p></noscript>
+
+        <form id="bos-form" novalidate>
+          <fieldset>
+            <legend>What are you selling?</legend>
+            <div class="choices" role="radiogroup" aria-label="Item type">
+              <label class="choice"><input type="radio" name="type" value="vehicle" checked><span>Car / truck</span></label>
+              <label class="choice"><input type="radio" name="type" value="motorcycle"><span>Motorcycle</span></label>
+              <label class="choice"><input type="radio" name="type" value="boat"><span>Boat</span></label>
+              <label class="choice"><input type="radio" name="type" value="trailer"><span>Trailer / RV</span></label>
+              <label class="choice"><input type="radio" name="type" value="other"><span>Other item</span></label>
+            </div>
+            <div class="fields" style="margin-top:16px">
+              <div class="field">
+                <label for="saleDate">Date of sale</label>
+                <input type="date" id="saleDate" name="saleDate">
+              </div>
+              <div class="field">
+                <label for="saleState">State where the sale takes place <span class="opt">(optional)</span></label>
+                <input type="text" id="saleState" name="saleState" autocomplete="off" placeholder="e.g. Ohio">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="two-col">
+            <fieldset>
+              <legend>Seller</legend>
+              <div class="stack">
+                <div class="field"><label for="sellerName">Full name</label><input type="text" id="sellerName" name="sellerName" autocomplete="off"></div>
+                <div class="field"><label for="sellerAddress">Street address</label><input type="text" id="sellerAddress" name="sellerAddress" autocomplete="off"></div>
+                <div class="field"><label for="sellerCity">City, state, ZIP</label><input type="text" id="sellerCity" name="sellerCity" autocomplete="off"></div>
+                <div class="field"><label for="sellerPhone">Phone <span class="opt">(optional)</span></label><input type="tel" id="sellerPhone" name="sellerPhone" autocomplete="off"></div>
+                <div class="field"><label for="sellerId">Driver's license or ID no. <span class="opt">(optional)</span></label><input type="text" id="sellerId" name="sellerId" autocomplete="off"></div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Buyer</legend>
+              <div class="stack">
+                <div class="field"><label for="buyerName">Full name</label><input type="text" id="buyerName" name="buyerName" autocomplete="off"></div>
+                <div class="field"><label for="buyerAddress">Street address</label><input type="text" id="buyerAddress" name="buyerAddress" autocomplete="off"></div>
+                <div class="field"><label for="buyerCity">City, state, ZIP</label><input type="text" id="buyerCity" name="buyerCity" autocomplete="off"></div>
+                <div class="field"><label for="buyerPhone">Phone <span class="opt">(optional)</span></label><input type="tel" id="buyerPhone" name="buyerPhone" autocomplete="off"></div>
+                <div class="field"><label for="buyerId">Driver's license or ID no. <span class="opt">(optional)</span></label><input type="text" id="buyerId" name="buyerId" autocomplete="off"></div>
+              </div>
+            </fieldset>
+          </div>
+
+          <fieldset>
+            <legend id="item-legend">Vehicle details</legend>
+            <div class="fields">
+              <div class="field wide" data-types="other">
+                <label for="description" id="description-label">Item description</label>
+                <input type="text" id="description" name="description" autocomplete="off" placeholder="e.g. Riding lawn mower with bagger">
+              </div>
+              <div class="field"><label for="year">Year</label><input type="text" id="year" name="year" inputmode="numeric" maxlength="4" autocomplete="off"></div>
+              <div class="field"><label for="make">Make / brand</label><input type="text" id="make" name="make" autocomplete="off"></div>
+              <div class="field"><label for="model">Model</label><input type="text" id="model" name="model" autocomplete="off"></div>
+              <div class="field"><label for="body" id="body-label">Body type</label><input type="text" id="body" name="body" autocomplete="off"></div>
+              <div class="field"><label for="color">Color</label><input type="text" id="color" name="color" autocomplete="off"></div>
+              <div class="field">
+                <label for="idNumber" id="idNumber-label">VIN</label>
+                <input type="text" id="idNumber" name="idNumber" autocomplete="off" spellcheck="false" aria-describedby="idNumber-hint">
+                <p class="hint" id="idNumber-hint">Copy it from the item and compare it with the title.</p>
+              </div>
+              <div class="field" data-types="vehicle motorcycle trailer">
+                <label for="odometer">Odometer reading <span class="opt" data-types="trailer">(if any)</span></label>
+                <input type="number" id="odometer" name="odometer" min="0" step="1" inputmode="numeric">
+              </div>
+              <div class="field" data-types="vehicle motorcycle trailer">
+                <label for="odoUnit">Unit</label>
+                <select id="odoUnit" name="odoUnit">
+                  <option value="miles" selected>Miles</option>
+                  <option value="km">Kilometers</option>
+                </select>
+              </div>
+              <div class="field wide" data-types="vehicle motorcycle boat trailer">
+                <label for="description2">Description <span class="opt">(optional)</span></label>
+                <input type="text" id="description2" name="description2" autocomplete="off" placeholder="e.g. Includes hardtop and two keys">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Price and payment</legend>
+            <div class="fields">
+              <div class="field"><label for="price">Sale price (USD)</label><input type="number" id="price" name="price" min="0" step="0.01" inputmode="decimal"></div>
+              <div class="field">
+                <label for="payMethod">Payment method</label>
+                <select id="payMethod" name="payMethod">
+                  <option value="">Fill in by hand</option>
+                  <option value="Cash" selected>Cash</option>
+                  <option value="Cashier's check">Cashier's check</option>
+                  <option value="Bank transfer">Bank transfer</option>
+                  <option value="Payment app">Payment app</option>
+                  <option value="Personal check">Personal check</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="field wide">
+                <label class="check-row"><input type="checkbox" id="paidInFull" name="paidInFull" checked> Paid in full when the document is signed</label>
+              </div>
+              <div class="field" id="deposit-field" hidden>
+                <label for="deposit">Deposit paid now (USD)</label>
+                <input type="number" id="deposit" name="deposit" min="0" step="0.01" inputmode="decimal">
+              </div>
+              <div class="field" id="balance-field" hidden>
+                <span class="label" id="balance-label">Balance due</span>
+                <output class="balance" id="balance" for="price deposit" aria-labelledby="balance-label">$0.00</output>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Terms</legend>
+            <div class="stack">
+              <div class="radio-list" role="radiogroup" aria-label="Warranty">
+                <label class="check-row"><input type="radio" name="terms" value="asis" checked> Sold as is, with no warranty</label>
+                <label class="check-row"><input type="radio" name="terms" value="warranty"> Sold with warranty terms written below</label>
+              </div>
+              <div class="field" id="warranty-field" hidden>
+                <label for="warrantyText">Warranty terms</label>
+                <textarea id="warrantyText" name="warrantyText" placeholder="What is covered, for how long, and how the buyer can use it. Leave empty to write it by hand."></textarea>
+              </div>
+              <label class="check-row"><input type="checkbox" id="lienFree" name="lienFree"> The seller states they own the item and it is free of liens</label>
+              <div class="field">
+                <label for="notes">Notes or items included <span class="opt">(optional)</span></label>
+                <textarea id="notes" name="notes" placeholder="e.g. Spare key, owner's manual and service records included."></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset id="odo-fieldset" data-types="vehicle motorcycle trailer">
+            <legend>Odometer disclosure statement</legend>
+            <div class="stack">
+              <label class="check-row"><input type="checkbox" id="odoInclude" name="odoInclude" checked> Add an odometer disclosure statement to the document</label>
+              <div class="radio-list" id="odo-options" role="radiogroup" aria-label="Odometer reading is">
+                <label class="check-row"><input type="radio" name="odoStatus" value="actual" checked> The reading is the actual mileage</label>
+                <label class="check-row"><input type="radio" name="odoStatus" value="exceeds"> The reading exceeds the odometer's mechanical limits</label>
+                <label class="check-row"><input type="radio" name="odoStatus" value="not_actual"> The reading is not the actual mileage</label>
+                <label class="check-row"><input type="radio" name="odoStatus" value="blank"> Leave the boxes empty to tick by hand</label>
+              </div>
+              <p class="hint">Generic wording. It does not replace a mileage disclosure your state asks for on the title or on its own form.</p>
+            </div>
+          </fieldset>
+
+          <div class="actions">
+            <button type="button" class="btn primary" data-print>Print / Save as PDF</button>
+            <button type="reset" class="btn secondary">Clear the form</button>
+          </div>
+          <p class="hint">In the print dialog, choose "Save as PDF" as the destination to get a PDF file. Turning off headers and footers gives a cleaner page.</p>
+        </form>
+      </section>
+
+      <section aria-labelledby="preview-heading">
+        <div class="preview-head no-print">
+          <h2 id="preview-heading">2. Check the preview</h2>
+          <button type="button" class="btn primary" data-print>Print / Save as PDF</button>
+        </div>
+        <div class="paper-wrap">
+          <article id="doc" aria-label="Bill of sale preview">
+            <div class="d-head"><div><div class="d-title">Bill of Sale</div></div></div>
+            <p>Turn on JavaScript to see your details here, or print this page and fill it in by hand.</p>
+          </article>
+        </div>
+        <p class="small no-print">Signature and date lines stay blank so that the buyer and the seller sign the printed copy in ink. Both parties should keep a copy.</p>
+      </section>
+
+      <section class="card app-promo no-print" aria-labelledby="app-heading">
+        <h2 id="app-heading">Sign it on your phone</h2>
+        <p>Meeting the buyer without a printer? The Bill of Sale app for Android does the same job on your phone: fill in the details, hand the phone to the seller and the buyer to sign on the screen with a finger, then share the agreement as a PDF by email or a messaging app.</p>
+        <ul class="features">
+          <li>Car or truck, motorcycle, boat, trailer or RV, equipment and other items, with VIN, HIN or serial number and odometer reading</li>
+          <li>On-screen signatures for both parties, with the signing date and time printed on the PDF</li>
+          <li>Works offline and needs no account; contracts, names and signatures are stored only on your phone</li>
+          <li>Edit a contract later; if you change the details after signing, the signatures are cleared so both sides can sign the new version</li>
+        </ul>
+        <p class="small">Free to download, with 3 free PDF exports and ads. Pro removes ads and the export limit, and a single extra export is also available as a one-time purchase.</p>
+        <div class="actions">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.mobilefactory.billofsale&amp;referrer=utm_source%3Dweb_tool%26utm_medium%3Dbill_of_sale_page%26utm_campaign%3Dweb" target="_blank" rel="noopener">Get it on Google Play</a>
+        </div>
+        <nav class="sub-links" aria-label="Bill of Sale app links">
+          <a href="../billofsale.html">App page</a>
+          <a href="../billofsale-privacy.html">App privacy policy</a>
+          <a href="../billofsale-terms.html">Terms of use</a>
+        </nav>
+      </section>
+
+      <article class="card no-print" aria-labelledby="about-heading">
+        <h2 id="about-heading">What is a bill of sale?</h2>
+        <p>A bill of sale is a short written record of a private sale. It names the seller and the buyer, describes what changed hands, and states the price and the date. When you sell a used car, a motorcycle, a boat or a trailer to another person instead of through a dealer, it gives both of you the same written account of what was agreed: who sold what to whom, for how much and on which terms.</p>
+        <p>For a titled vehicle or boat, the bill of sale usually sits next to the title rather than taking its place. Ownership is normally transferred by signing over the title and registering the change with your state. The bill of sale adds what a title often leaves out, such as the agreed price, how it was paid, whether part of it is still owed and whether the item was sold as is. Some states ask for a bill of sale at registration, some publish their own form, and some do not ask for one at all. Look up the rules on your state's DMV website, or the agency that registers boats, before the sale.</p>
+
+        <h2 id="include-heading" style="margin-top:28px">What to include in a bill of sale</h2>
+        <ul>
+          <li>The date of the sale and the state where it takes place.</li>
+          <li>The full names and addresses of the seller and the buyer. A phone number and a driver's license or ID number make each person easier to identify later.</li>
+          <li>A clear description of the item: year, make, model, body type and color, plus the VIN for a car, truck or motorcycle, the hull identification number (HIN) for a boat, or a serial number for a trailer, equipment or other goods.</li>
+          <li>The odometer reading for a motor vehicle.</li>
+          <li>The sale price, how it is paid, and any deposit and balance still due.</li>
+          <li>Whether the item is sold as is or with a warranty, and what that warranty covers.</li>
+          <li>Anything that comes with the sale, such as spare keys, accessories, a boat trailer or service records.</li>
+          <li>The signatures of both parties, the date and their printed names.</li>
+        </ul>
+        <p>Copy the VIN or HIN exactly as it appears on the item and check it against the title. A single wrong character can cause trouble when the buyer registers the item.</p>
+
+        <h2 id="asis-heading" style="margin-top:28px">Selling a car "as is"</h2>
+        <p>Most private sales are as-is sales. The buyer takes the item in its current condition, with whatever faults it has, and the seller does not promise to fix anything after the sale. The as-is clause in this template says that the seller gives no warranty, express or implied, and that the buyer had the chance to inspect the item before buying it.</p>
+        <p>As a buyer, look the item over, take a test drive and consider an independent inspection before you sign. As a seller, describe the item honestly: an as-is clause covers ordinary wear and faults nobody knew about, but it may not protect a seller who hides a known problem or misstates the mileage. If you do offer a warranty, for example 30 days on the engine, choose the warranty option and write down exactly what is covered, for how long and what the buyer has to do to use it. Vague promises lead to disputes.</p>
+
+        <h2 id="odo-heading" style="margin-top:28px">Odometer disclosure</h2>
+        <p>When a motor vehicle changes hands, the seller is usually expected to state the mileage in writing, often on the title itself or on a separate form. The optional statement in this generator records the reading and whether, to the seller's knowledge, it is the actual mileage, exceeds the odometer's mechanical limits or is not the actual mileage. It is a written record between the two of you and does not replace a disclosure your state asks for.</p>
+      </article>
+
+      <section class="card faq no-print" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently asked questions</h2>
+        <h3>Is this bill of sale generator free?</h3>
+        <p>Yes. There is no charge and no sign-up. You fill in the form, check the preview and print the document or save it as a PDF. The page runs in your browser: it does not upload or save what you type, sets no cookies and has no trackers.</p>
+        <h3>Do I need a bill of sale to sell a car?</h3>
+        <p>It depends on your state. Some states ask for a bill of sale when the buyer registers a vehicle bought from a private seller, others only recommend one, and several publish their own form that you are expected to use. Even where it is not required, a signed bill of sale gives both sides a written record of the price, the date and the terms. Check your state's DMV website before you meet the buyer.</p>
+        <h3>Does a bill of sale replace the title?</h3>
+        <p>No. For a titled vehicle, boat or trailer, ownership is normally transferred by signing the title over to the buyer and registering the change with the state. A bill of sale records the terms of the sale alongside the title. Keep both, and follow your state's steps for the title transfer.</p>
+        <h3>Does a bill of sale have to be notarized?</h3>
+        <p>It depends on your state and on what is being sold. Some states require a notarized bill of sale or a notarized title for certain sales, and many do not. This page does not notarize anything. If a notary is required where you live, print the document and sign it in front of one.</p>
+        <h3>What does "sold as is" mean?</h3>
+        <p>The buyer accepts the item in its current condition, with all known and unknown faults, and the seller gives no warranty after the sale. It does not excuse hiding a known defect or misstating the mileage. If you agree on any warranty, choose the warranty option and write the terms out in full.</p>
+        <h3>Can I use it for a boat, a trailer or another item?</h3>
+        <p>Yes. Choose the item type at the top of the form. For a boat, enter the hull identification number (HIN) and list a motor or trailer included in the sale in the notes. For a trailer, equipment or other goods, use the serial number and a short description. Boats and trailers may also need to be titled or registered, depending on your state.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer no-print">
+      <p>&copy; 2026 ObAppStudio · <a href="../index.html">All apps</a> · <a href="../privacy.html">Studio privacy policy</a> · <a href="mailto:oguzhanbilgidev@gmail.com">oguzhanbilgidev@gmail.com</a></p>
+    </footer>
+  </div>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var form = document.getElementById('bos-form');
+    var doc = document.getElementById('doc');
+    if (!form || !doc) return;
+
+    var TYPES = {
+      vehicle: { label: 'Car / truck', title: 'Vehicle Bill of Sale', legend: 'Vehicle details', idLabel: 'VIN', body: 'Body type', motor: true },
+      motorcycle: { label: 'Motorcycle', title: 'Motorcycle Bill of Sale', legend: 'Motorcycle details', idLabel: 'VIN', body: 'Body type / style', motor: true },
+      boat: { label: 'Boat / watercraft', title: 'Boat Bill of Sale', legend: 'Boat details', idLabel: 'HIN (hull identification number)', body: 'Hull type / length', motor: false },
+      trailer: { label: 'Trailer / RV', title: 'Trailer Bill of Sale', legend: 'Trailer details', idLabel: 'VIN or serial number', body: 'Type / length', motor: false },
+      other: { label: 'Other item', title: 'Bill of Sale', legend: 'Item details', idLabel: 'Serial number', body: 'Type / size', motor: false }
+    };
+    var ODO_LINES = [
+      ['actual', 'reflects the actual mileage of the vehicle.'],
+      ['exceeds', 'reflects mileage in excess of the odometer’s mechanical limits.'],
+      ['not_actual', 'is NOT the actual mileage. Warning: odometer discrepancy.']
+    ];
+    var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+
+    // ---------- Safe DOM helpers: user text only ever goes in via text nodes. ----------
+    function el(tag, className, children) {
+      var node = document.createElement(tag);
+      if (className) node.className = className;
+      add(node, children);
+      return node;
+    }
+    function add(node, child) {
+      if (child === null || child === undefined || child === false) return;
+      if (Array.isArray(child)) { for (var i = 0; i < child.length; i++) add(node, child[i]); return; }
+      if (typeof child === 'string' || typeof child === 'number') { node.appendChild(document.createTextNode(String(child))); return; }
+      node.appendChild(child);
+    }
+    function blank(size) { return el('span', 'blank' + (size ? ' ' + size : ''), ' '); }
+    function textOrBlank(value, size) { return value ? value : blank(size); }
+    function clear(node) { while (node.firstChild) node.removeChild(node.firstChild); }
+
+    // ---------- Reading the form ----------
+    function field(name) { return form.elements.namedItem(name); }
+    function text(name) {
+      var f = field(name);
+      return f && typeof f.value === 'string' ? f.value.replace(/\s+/g, ' ').trim() : '';
+    }
+    function multiline(name) {
+      var f = field(name);
+      return f && typeof f.value === 'string' ? f.value.replace(/\r\n?/g, '\n').trim() : '';
+    }
+    function checked(name) { var f = field(name); return !!(f && f.checked); }
+    function radio(name, fallback) {
+      var list = form.querySelectorAll('input[name="' + name + '"]');
+      for (var i = 0; i < list.length; i++) if (list[i].checked) return list[i].value;
+      return fallback;
+    }
+    function amount(name) {
+      var n = parseFloat(text(name).replace(/,/g, ''));
+      return isFinite(n) && n > 0 ? Math.round(n * 100) / 100 : 0;
+    }
+    function formatDate(key) {
+      var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(key);
+      if (!m) return '';
+      var d = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+      if (isNaN(d.getTime())) return '';
+      return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+    function todayKey() {
+      var d = new Date();
+      var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+      return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+    }
+
+    function readState() {
+      var type = radio('type', 'vehicle');
+      if (!TYPES[type]) type = 'vehicle';
+      var price = amount('price');
+      var paidInFull = checked('paidInFull');
+      var deposit = paidInFull ? price : Math.min(amount('deposit'), price || amount('deposit'));
+      var odometerValue = parseFloat(text('odometer'));
+      var odometer = isFinite(odometerValue) && odometerValue > 0 ? Math.round(odometerValue) : 0;
+      var hasOdometerField = type === 'vehicle' || type === 'motorcycle' || type === 'trailer';
+      return {
+        type: type,
+        info: TYPES[type],
+        date: formatDate(text('saleDate')),
+        state: text('saleState'),
+        seller: { name: text('sellerName'), address: text('sellerAddress'), city: text('sellerCity'), phone: text('sellerPhone'), id: text('sellerId') },
+        buyer: { name: text('buyerName'), address: text('buyerAddress'), city: text('buyerCity'), phone: text('buyerPhone'), id: text('buyerId') },
+        description: type === 'other' ? text('description') : text('description2'),
+        year: text('year'),
+        make: text('make'),
+        model: text('model'),
+        body: text('body'),
+        color: text('color'),
+        idNumber: text('idNumber').toUpperCase(),
+        odometer: hasOdometerField ? odometer : 0,
+        odoUnit: text('odoUnit') === 'km' ? 'km' : 'miles',
+        price: price,
+        payMethod: text('payMethod'),
+        paidInFull: paidInFull,
+        deposit: deposit,
+        balance: Math.max(0, Math.round((price - deposit) * 100) / 100),
+        asIs: radio('terms', 'asis') !== 'warranty',
+        warranty: multiline('warrantyText'),
+        lienFree: checked('lienFree'),
+        notes: multiline('notes'),
+        odoInclude: checked('odoInclude') && (TYPES[type].motor || (type === 'trailer' && odometer > 0)),
+        odoStatus: radio('odoStatus', 'actual')
+      };
+    }
+
+    // ---------- Building the document ----------
+    function multilineNodes(value) {
+      var parts = value.split('\n');
+      var out = [];
+      for (var i = 0; i < parts.length; i++) {
+        if (i > 0) out.push(document.createElement('br'));
+        out.push(parts[i]);
+      }
+      return out;
+    }
+
+    function partyBox(role, p) {
+      function row(label, value) { return el('div', 'd-row', [el('b', null, label + ': '), textOrBlank(value, 'short')]); }
+      return el('div', 'd-party', [
+        el('div', 'd-role', role),
+        el('div', 'd-name', textOrBlank(p.name)),
+        row('Address', p.address),
+        row('City, state, ZIP', p.city),
+        row('Phone', p.phone),
+        row("Driver's license / ID no.", p.id)
+      ]);
+    }
+
+    function kvTable(rows) {
+      var tbody = el('tbody');
+      for (var i = 0; i < rows.length; i++) {
+        tbody.appendChild(el('tr', null, [el('th', null, rows[i][0]), el('td', null, rows[i][1])]));
+      }
+      return el('table', 'd-kv', tbody);
+    }
+
+    function clause(title, body) {
+      return el('p', 'd-clause', [el('strong', null, title + '. '), body]);
+    }
+
+    function signatureBlock(role, name) {
+      return el('div', 'd-sig', [
+        el('div', 'd-sig-line'),
+        el('div', 'd-sig-label', role + ' signature'),
+        el('div', 'd-sig-meta', [
+          'Printed name: ', name ? el('strong', null, name) : blank(), document.createElement('br'),
+          'Date: ', blank('short')
+        ])
+      ]);
+    }
+
+    function itemTitle(s) {
+      var t = [s.year, s.make, s.model].filter(Boolean).join(' ');
+      return t || s.description;
+    }
+
+    function render() {
+      var s = readState();
+      var reading = s.odometer > 0 ? s.odometer.toLocaleString('en-US') + ' ' + s.odoUnit : '';
+      var title = itemTitle(s);
+
+      var head = el('div', 'd-head', [
+        el('div', null, [
+          el('div', 'd-title', s.info.title),
+          el('div', 'd-sub', [s.asIs ? 'Private sale — sold as is' : 'Private sale — with warranty terms', title ? ' · ' + title : ''])
+        ]),
+        el('div', 'd-meta', [
+          el('div', null, [el('b', null, 'Date of sale: '), textOrBlank(s.date, 'short')]),
+          el('div', null, [el('b', null, 'State: '), textOrBlank(s.state, 'short')])
+        ])
+      ]);
+
+      var itemRows = [['Item type', s.info.label]];
+      if (s.type === 'other' || s.description) itemRows.push(['Description', textOrBlank(s.description)]);
+      itemRows.push(['Year', textOrBlank(s.year, 'short')]);
+      itemRows.push(['Make / brand', textOrBlank(s.make)]);
+      itemRows.push(['Model', textOrBlank(s.model)]);
+      itemRows.push([s.info.body, textOrBlank(s.body)]);
+      itemRows.push(['Color', textOrBlank(s.color)]);
+      itemRows.push([s.info.idLabel, s.idNumber ? el('span', 'd-mono', s.idNumber) : blank()]);
+      if (s.type === 'vehicle' || s.type === 'motorcycle' || (s.type === 'trailer' && s.odometer > 0)) {
+        itemRows.push(['Odometer reading', reading || blank()]);
+      }
+
+      var priceRows = [
+        ['Sale price', s.price > 0 ? el('strong', null, money.format(s.price)) : blank()],
+        ['Payment method', textOrBlank(s.payMethod)]
+      ];
+      if (s.paidInFull) {
+        priceRows.push(['Amount paid at signing', s.price > 0 ? money.format(s.price) : blank()]);
+        priceRows.push(['Balance due', s.price > 0 ? money.format(0) : blank()]);
+      } else {
+        priceRows.push(['Deposit paid', s.deposit > 0 ? money.format(s.deposit) : blank()]);
+        priceRows.push(['Balance due', s.price > 0 ? money.format(s.balance) : blank()]);
+      }
+
+      var terms = [
+        clause('Sale', 'For the sale price stated above, the Seller sells and transfers to the Buyer the item described in this document, and the Buyer accepts it.')
+      ];
+      if (s.asIs) {
+        terms.push(clause('Sold as is', 'The item is sold "AS IS, WHERE IS", with all faults, known and unknown. The Seller makes no warranty, express or implied, including any implied warranty of merchantability or fitness for a particular purpose. The Buyer confirms they had the opportunity to inspect the item before the purchase.'));
+      } else if (s.warranty) {
+        terms.push(clause('Warranty terms', multilineNodes(s.warranty)));
+      } else {
+        terms.push(clause('Warranty terms', ['Any warranty given by the Seller is written here and initialed by both parties:', blank('full'), blank('full'), blank('full')]));
+      }
+      terms.push(clause('Ownership and liens', s.lienFree
+        ? 'The Seller states that they are the lawful owner of the item, have the right to sell it, and that it is free of all liens and encumbrances.'
+        : 'The Seller makes no statement in this document that the item is free of liens or encumbrances. The Buyer should check for existing liens before payment.'));
+      terms.push(clause('Possession', 'From the transfer of possession, the Buyer is responsible for the use, operation, insurance and registration of the item.'));
+      if (s.notes) terms.push(clause('Notes and items included', multilineNodes(s.notes)));
+
+      var odoBlock = null;
+      if (s.odoInclude) {
+        var lines = [];
+        for (var i = 0; i < ODO_LINES.length; i++) {
+          var mark = reading && s.odoStatus === ODO_LINES[i][0] ? 'X' : ' ';
+          lines.push(el('div', 'd-odo-line', [el('span', 'd-box', mark), ODO_LINES[i][1]]));
+        }
+        odoBlock = el('div', 'd-odo', [
+          el('div', 'd-odo-title', 'Odometer disclosure statement'),
+          el('div', 'd-odo-line', [
+            'The Seller states that the odometer of the vehicle described above now reads ',
+            reading ? el('strong', null, reading) : blank('short'),
+            ' and that, to the best of the Seller’s knowledge, the reading:'
+          ]),
+          lines,
+          el('div', 'd-odo-line', 'By signing below, the Seller makes this statement and the Buyer acknowledges receiving it.')
+        ]);
+      }
+
+      var content = [
+        head,
+        el('div', 'd-h', '1. Seller and buyer'),
+        el('div', 'd-cols', [partyBox('Seller', s.seller), partyBox('Buyer', s.buyer)]),
+        el('div', 'd-h', '2. Item sold'),
+        kvTable(itemRows),
+        el('div', 'd-h', '3. Price and payment'),
+        kvTable(priceRows),
+        el('div', 'd-h', '4. Terms'),
+        terms,
+        odoBlock,
+        el('div', 'd-h', '5. Signatures'),
+        el('div', 'd-cols', [signatureBlock('Seller', s.seller.name), signatureBlock('Buyer', s.buyer.name)]),
+        el('div', 'd-disclaimer', 'This bill of sale is a template completed and checked by the buyer and the seller. It is not legal advice and not a government form. Requirements vary by state; some states require their own form, a title transfer or notarization.'),
+        el('div', 'd-credit', 'Prepared with the free bill of sale generator at oguzhanbilgi.github.io/obappstudio-legal/bill-of-sale/')
+      ];
+
+      clear(doc);
+      add(doc, content);
+      return s;
+    }
+
+    // ---------- Form behaviour ----------
+    var odoTouched = false;
+    function syncForm() {
+      var type = radio('type', 'vehicle');
+      var info = TYPES[type] || TYPES.vehicle;
+      var shown = form.querySelectorAll('[data-types]');
+      for (var i = 0; i < shown.length; i++) {
+        var list = shown[i].getAttribute('data-types').split(' ');
+        shown[i].hidden = list.indexOf(type) === -1;
+      }
+      document.getElementById('item-legend').textContent = info.legend;
+      document.getElementById('idNumber-label').textContent = info.idLabel;
+      document.getElementById('body-label').textContent = info.body;
+      if (!odoTouched) field('odoInclude').checked = info.motor;
+
+      var paid = checked('paidInFull');
+      document.getElementById('deposit-field').hidden = paid;
+      document.getElementById('balance-field').hidden = paid;
+      document.getElementById('warranty-field').hidden = radio('terms', 'asis') !== 'warranty';
+      document.getElementById('odo-options').hidden = !checked('odoInclude');
+    }
+
+    function update() {
+      syncForm();
+      var s = render();
+      document.getElementById('balance').textContent = money.format(s.balance);
+    }
+
+    var dateInput = field('saleDate');
+    dateInput.value = todayKey();
+    dateInput.defaultValue = dateInput.value;
+
+    form.addEventListener('input', update);
+    form.addEventListener('change', function (event) {
+      if (event.target && event.target.name === 'odoInclude') odoTouched = true;
+      update();
+    });
+    form.addEventListener('submit', function (event) { event.preventDefault(); });
+    form.addEventListener('reset', function (event) {
+      if (!window.confirm('Clear all fields?')) { event.preventDefault(); return; }
+      odoTouched = false;
+      setTimeout(update, 0);
+    });
+
+    var printButtons = document.querySelectorAll('[data-print]');
+    for (var b = 0; b < printButtons.length; b++) {
+      printButtons[b].addEventListener('click', function () { window.print(); });
+    }
+
+    // A meaningful file name when the browser saves the print as PDF.
+    var pageTitle = document.title;
+    window.addEventListener('beforeprint', function () {
+      var s = render();
+      var t = itemTitle(s);
+      document.title = s.info.title + (t ? ' - ' + t : '');
+    });
+    window.addEventListener('afterprint', function () { document.title = pageTitle; });
+
+    update();
+  })();
+  </script>
+</body>
+</html>
