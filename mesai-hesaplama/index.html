@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fazla Mesai Hesaplama – Ücretsiz Mesai Ücreti Hesaplayıcı</title>
+  <meta name="description" content="Fazla mesai ücretinizi hesaplayın: brüt ücret ÷ 225 ile saatlik ücret, %50 zamlı fazla çalışma, %25 zamlı fazla sürelerle çalışma. Ücretsiz, kayıtsız.">
+  <link rel="canonical" href="https://oguzhanbilgi.github.io/obappstudio-legal/mesai-hesaplama/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#070a12" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:title" content="Fazla Mesai Hesaplama – Ücretsiz Mesai Ücreti Hesaplayıcı">
+  <meta property="og:description" content="Aylık brüt ücretinizi ve fazla çalışma saatlerinizi girin; saatlik ücreti, %50 ve %25 zamlı fazla mesai ücretini ve toplam brüt ek ödemeyi görün.">
+  <meta property="og:url" content="https://oguzhanbilgi.github.io/obappstudio-legal/mesai-hesaplama/">
+  <meta property="og:site_name" content="ObAppStudio">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://oguzhanbilgi.github.io/obappstudio-legal/mesai-hesaplama/#app",
+        "name": "Fazla Mesai Hesaplama",
+        "url": "https://oguzhanbilgi.github.io/obappstudio-legal/mesai-hesaplama/",
+        "description": "Aylık brüt ücretten saatlik ücreti bulan ve fazla çalışma (%50 zamlı), fazla sürelerle çalışma (%25 zamlı) ve genel tatil çalışması için brüt ek ödemeyi hesaplayan ücretsiz hesaplayıcı. Hesap tarayıcıda yapılır.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "inLanguage": "tr-TR",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "TRY"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ObAppStudio",
+          "email": "oguzhanbilgidev@gmail.com",
+          "url": "https://oguzhanbilgi.github.io/obappstudio-legal/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://oguzhanbilgi.github.io/obappstudio-legal/mesai-hesaplama/#sss",
+        "inLanguage": "tr-TR",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Fazla mesai ücreti nasıl hesaplanır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Önce bir saatlik normal ücret bulunur: aylık brüt ücret, haftalık 45 saatlik çalışmada genellikle 225'e bölünür. Haftalık 45 saati aşan her saat için bu saatlik ücretin yüzde elli fazlası, yani 1,5 katı ödenir. Fazla mesai ücreti = saatlik ücret × 1,5 × fazla çalışma saati."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Aylık maaş neden 225'e bölünüyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Haftalık 45 saat, hafta tatili dışındaki 6 güne bölündüğünde günde 7,5 saat eder. Aylık ücret 30 günü karşıladığı için 7,5 × 30 = 225 saat kabul edilir. Bu, uygulamada sık kullanılan bir varsayımdır; bordronuzda farklı bir yöntem kullanılıyorsa saatlik ücretinizi hesaplayıcıya elle girebilirsiniz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Fazla sürelerle çalışma nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sözleşmenizdeki haftalık çalışma süresi 45 saatin altındaysa, bu süreyi aşan ama 45 saate kadar olan çalışmalar fazla sürelerle çalışmadır. Bu saatler için normal saatlik ücretin yüzde yirmi beş fazlası, yani 1,25 katı ödenir. 45 saati aşan kısım ise fazla çalışmadır ve 1,5 katı ödenir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Yılda en fazla kaç saat fazla mesai yapılabilir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "4857 sayılı İş Kanunu'nun 41. maddesine göre fazla çalışma süresinin toplamı bir yılda 270 saatten fazla olamaz. Aynı maddeye göre fazla saatlerle çalışmak için işçinin onayı alınmalıdır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bayram veya genel tatil gününde çalışınca ne ödenir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "İş Kanunu'nun 47. maddesine göre ulusal bayram ve genel tatil günlerinde tatil yapmayıp çalışan işçiye, o günün ücretine ek olarak çalışılan her gün için bir günlük ücret daha ödenir. Hesaplayıcı bu ek ödemeyi aylık brüt ücretin 30'da biri üzerinden hesaplar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hesaplanan tutar net mi, brüt mü?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Brüt. Sonuçlar vergi ve SGK primi düşülmeden önceki tutarlardır; elinize geçecek net tutar daha düşük olur. İş sözleşmeniz, toplu iş sözleşmesi veya işyerinizdeki uygulama farklı bir hesap öngörebilir. Bordronuzu ve sözleşmenizi kontrol edin."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #070a12;
+      --surface: #111827;
+      --surface-2: #0b1120;
+      --border: #1e293b;
+      --input-bg: #0b1120;
+      --input-border: #334155;
+      --heading: #ffffff;
+      --text: #f8fafc;
+      --body: #cbd5e1;
+      --muted: #94a3b8;
+      --faint: #64748b;
+      --accent: #93c5fd;
+      --accent-strong: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.14);
+      --accent-line: rgba(37, 99, 235, 0.42);
+      --warn: #fcd34d;
+      --warn-soft: rgba(245, 158, 11, 0.12);
+      --warn-line: rgba(245, 158, 11, 0.45);
+      --error: #fca5a5;
+      --btn-bg: #ffffff;
+      --btn-text: #0f172a;
+      color-scheme: dark;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --surface-2: #f1f5f9;
+        --border: #e2e8f0;
+        --input-bg: #ffffff;
+        --input-border: #cbd5e1;
+        --heading: #0f172a;
+        --text: #0f172a;
+        --body: #334155;
+        --muted: #475569;
+        --faint: #64748b;
+        --accent: #1d4ed8;
+        --accent-strong: #2563eb;
+        --accent-soft: rgba(37, 99, 235, 0.08);
+        --accent-line: rgba(37, 99, 235, 0.35);
+        --warn: #92400e;
+        --warn-soft: rgba(245, 158, 11, 0.1);
+        --warn-line: rgba(217, 119, 6, 0.45);
+        --error: #b91c1c;
+        --btn-bg: #0f172a;
+        --btn-text: #ffffff;
+        color-scheme: light;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      padding: 24px 16px 64px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    .container { max-width: 980px; margin: 0 auto; }
+    a { color: var(--accent); text-underline-offset: 2px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .topbar {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 8px 16px; padding-bottom: 16px; margin-bottom: 32px; border-bottom: 1px solid var(--border);
+    }
+    .brand { color: var(--text); font-weight: 800; letter-spacing: -0.01em; text-decoration: none; }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; }
+    .navlinks a { color: var(--muted); text-decoration: none; }
+    .navlinks a:hover { color: var(--text); }
+
+    .hero { margin: 8px 0 28px; text-align: center; }
+    .pill {
+      display: inline-block; margin: 0 0 12px; padding: 4px 12px;
+      border: 1px solid var(--accent-line); border-radius: 999px; background: var(--accent-soft);
+      color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 10px; color: var(--heading); font-size: clamp(28px, 5vw, 40px);
+      font-weight: 800; line-height: 1.2; letter-spacing: -0.02em;
+    }
+    .lead { max-width: 680px; margin: 0 auto 8px; color: var(--muted); font-size: 17px; }
+    h2 {
+      margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
+      color: var(--heading); font-size: 22px; line-height: 1.3;
+    }
+    h3 { margin: 22px 0 8px; color: var(--heading); font-size: 16.5px; line-height: 1.4; }
+    p, li { color: var(--body); font-size: 15.5px; }
+    p { margin: 0 0 12px; }
+    ul, ol { margin: 0 0 12px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    strong { color: var(--text); }
+
+    .card {
+      margin-bottom: 24px; padding: 28px; border: 1px solid var(--border);
+      border-radius: 16px; background: var(--surface);
+    }
+    .notice {
+      display: grid; gap: 4px; margin: 0 0 24px; padding: 14px 18px;
+      border: 1px solid var(--accent-line); border-radius: 12px; background: var(--accent-soft);
+    }
+    .notice p { margin: 0; font-size: 14.5px; }
+
+    /* Form */
+    fieldset {
+      margin: 0 0 20px; padding: 20px; min-width: 0;
+      border: 1px solid var(--border); border-radius: 14px; background: var(--surface-2);
+    }
+    legend { padding: 0 8px; color: var(--heading); font-size: 15px; font-weight: 800; }
+    .fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+    .field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+    .field label { color: var(--body); font-size: 14px; font-weight: 600; }
+    .opt { color: var(--faint); font-weight: 400; }
+    .input-wrap { position: relative; }
+    .input-wrap .unit {
+      position: absolute; top: 50%; right: 12px; transform: translateY(-50%);
+      color: var(--faint); font-size: 14px; pointer-events: none;
+    }
+    input[type="text"], input[type="date"] {
+      width: 100%; min-height: 44px; padding: 9px 44px 9px 11px;
+      border: 1px solid var(--input-border); border-radius: 10px; background: var(--input-bg);
+      color: var(--text); font: inherit; font-size: 16px;
+    }
+    input[aria-invalid="true"] { border-color: var(--error); }
+    .hint { margin: 0; color: var(--faint); font-size: 13px; }
+    .err { margin: 0; color: var(--error); font-size: 13px; font-weight: 600; }
+    .err:empty { display: none; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 4px 0 8px; }
+    .btn {
+      display: inline-block; padding: 12px 20px; border: 1px solid transparent; border-radius: 12px;
+      background: var(--btn-bg); color: var(--btn-text); font: inherit; font-size: 15px; font-weight: 800;
+      text-align: center; text-decoration: none; cursor: pointer;
+    }
+    .btn:hover { opacity: 0.92; }
+    .btn.secondary { background: transparent; border-color: var(--input-border); color: var(--body); }
+    .btn.primary { background: var(--accent-strong); color: #ffffff; }
+
+    /* Results */
+    .results { border-color: var(--accent-line); }
+    .result-table { width: 100%; border-collapse: collapse; margin: 0 0 12px; }
+    .result-table th, .result-table td { padding: 10px 6px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    .result-table th { color: var(--body); font-size: 15px; font-weight: 600; }
+    .result-table th .calc { display: block; color: var(--faint); font-size: 13px; font-weight: 400; overflow-wrap: anywhere; }
+    .result-table td { color: var(--text); font-size: 16px; font-weight: 700; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .result-table tr.total th, .result-table tr.total td { border-bottom: 0; padding-top: 14px; color: var(--heading); font-size: 18px; font-weight: 800; }
+    .result-table tr.total td { color: var(--accent); font-size: 22px; }
+    .result-empty { margin: 0 0 12px; color: var(--muted); }
+    .warn-box {
+      margin: 0 0 12px; padding: 10px 14px; border: 1px solid var(--warn-line); border-radius: 10px;
+      background: var(--warn-soft); color: var(--warn); font-size: 14px;
+    }
+    .warn-box:empty { display: none; }
+    .warn-box p { margin: 0; color: var(--warn); font-size: 14px; }
+    .warn-box p + p { margin-top: 6px; }
+
+    .examples li { margin-bottom: 10px; }
+
+    /* App promotion */
+    .app-promo { border-color: var(--accent-line); }
+    .app-promo .features { margin: 0 0 18px; padding: 0; list-style: none; }
+    .app-promo .features li { position: relative; padding-left: 20px; }
+    .app-promo .features li::before {
+      content: ""; position: absolute; top: 0.62em; left: 2px; width: 8px; height: 8px;
+      border-radius: 2px; background: var(--accent-strong);
+    }
+    .sub-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 14px; font-size: 13px; }
+    .sub-links a { color: var(--muted); }
+    .small { color: var(--faint); font-size: 13px; }
+
+    .faq h3 { margin-top: 20px; }
+    .site-footer {
+      margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border);
+      color: var(--faint); font-size: 13px; text-align: center;
+    }
+    .site-footer p { color: var(--faint); font-size: 13px; }
+    .site-footer a { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .card { padding: 20px 16px; }
+      fieldset { padding: 16px 14px; }
+      .actions .btn { flex: 1 1 100%; }
+      .result-table td { font-size: 15px; }
+      .result-table tr.total td { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="topbar" aria-label="Site">
+      <a class="brand" href="../index.html">ObAppStudio</a>
+      <div class="navlinks">
+        <a href="../index.html">Uygulamalar</a>
+        <a href="../tools/">Ücretsiz araçlar</a>
+        <a href="../kira-artis-hesaplama/">Kira artış hesaplama</a>
+        <a href="../privacy.html#tr">Gizlilik</a>
+      </div>
+    </nav>
+
+    <main>
+      <header class="hero">
+        <p class="pill">Ücretsiz · Kayıt gerekmez</p>
+        <h1>Fazla Mesai Hesaplama</h1>
+        <p class="lead">Aylık brüt ücretinizi ve bu ayki fazla çalışma saatlerinizi girin; saatlik ücretinizi, fazla mesai ücretinizi ve toplam brüt ek ödemeyi hemen görün.</p>
+      </header>
+
+      <div class="notice" role="note">
+        <p><strong>Hesap tarayıcınızda yapılır.</strong> Bu sayfa girdiğiniz rakamları hiçbir yere göndermez ve kaydetmez; çerez ve izleyici kullanmaz.</p>
+        <p>Sonuçlar <strong>brüttür</strong>: vergi ve SGK primi düşülmeden önceki tutarlardır. Bu bir hesap yardımcısıdır, hukuki veya mali danışmanlık değildir. İş sözleşmeniz, toplu iş sözleşmesi ve işyerinize özgü durumlar farklı bir sonuç doğurabilir.</p>
+      </div>
+
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Bilgilerinizi girin</h2>
+        <noscript><p><strong>Hesaplayıcı JavaScript ile çalışır.</strong> JavaScript kapalıysa aşağıdaki formülleri ve örnekleri kullanarak hesabı elle yapabilirsiniz.</p></noscript>
+
+        <form id="calc" novalidate>
+          <fieldset>
+            <legend>Ücret</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="monthly">Aylık brüt ücret</label>
+                <div class="input-wrap">
+                  <input type="text" id="monthly" name="monthly" inputmode="decimal" autocomplete="off" placeholder="Örn. 45.000" aria-describedby="monthly-hint monthly-err" data-min="0">
+                  <span class="unit" aria-hidden="true">₺</span>
+                </div>
+                <p class="hint" id="monthly-hint">Bordronuzdaki brüt tutar. 45.000 veya 45.000,50 gibi yazabilirsiniz.</p>
+                <p class="err" id="monthly-err" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="hourly">Saatlik brüt ücret <span class="opt">(isteğe bağlı)</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="hourly" name="hourly" inputmode="decimal" autocomplete="off" placeholder="Boş bırakılırsa hesaplanır" aria-describedby="hourly-hint hourly-err" data-min="0">
+                  <span class="unit" aria-hidden="true">₺</span>
+                </div>
+                <p class="hint" id="hourly-hint">Saatlik ücretle çalışıyorsanız ya da bordronuzdaki saatlik ücreti biliyorsanız girin; aylık ücretten hesaplanan değerin yerine bu kullanılır.</p>
+                <p class="err" id="hourly-err" aria-live="polite"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Çalışma süresi</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="weekly">Haftalık sözleşme saati</label>
+                <div class="input-wrap">
+                  <input type="text" id="weekly" name="weekly" inputmode="decimal" autocomplete="off" value="45" aria-describedby="weekly-hint weekly-err" data-min="1">
+                  <span class="unit" aria-hidden="true">saat</span>
+                </div>
+                <p class="hint" id="weekly-hint">İş sözleşmenizdeki haftalık süre. Kanuna göre en çok 45 saattir.</p>
+                <p class="err" id="weekly-err" aria-live="polite"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Bu ayki çalışmalar</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="otHours">Fazla çalışma saati <span class="opt">(%50 zamlı)</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="otHours" name="otHours" inputmode="decimal" autocomplete="off" placeholder="Örn. 10" aria-describedby="otHours-hint otHours-err" data-min="0">
+                  <span class="unit" aria-hidden="true">saat</span>
+                </div>
+                <p class="hint" id="otHours-hint">Haftalık 45 saati aşan çalışmalarınızın bu ayki toplamı. Yarım saat için 0,5 yazın.</p>
+                <p class="err" id="otHours-err" aria-live="polite"></p>
+              </div>
+              <div class="field" id="extHours-field" hidden>
+                <label for="extHours">Fazla sürelerle çalışma saati <span class="opt">(%25 zamlı)</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="extHours" name="extHours" inputmode="decimal" autocomplete="off" placeholder="Örn. 8" aria-describedby="extHours-hint extHours-err" data-min="0">
+                  <span class="unit" aria-hidden="true">saat</span>
+                </div>
+                <p class="hint" id="extHours-hint">Sözleşme saatinizi aşan ama haftada 45 saati geçmeyen çalışmalarınızın bu ayki toplamı.</p>
+                <p class="err" id="extHours-err" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="holidayDays">Genel tatilde çalışılan gün <span class="opt">(isteğe bağlı)</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="holidayDays" name="holidayDays" inputmode="decimal" autocomplete="off" placeholder="Örn. 1" aria-describedby="holidayDays-hint holidayDays-err" data-min="0">
+                  <span class="unit" aria-hidden="true">gün</span>
+                </div>
+                <p class="hint" id="holidayDays-hint">Ulusal bayram ve genel tatil günlerinde çalıştığınız gün sayısı. Yarım gün için 0,5 yazın.</p>
+                <p class="err" id="holidayDays-err" aria-live="polite"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">Hesapla</button>
+            <button type="reset" class="btn secondary">Temizle</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card results" aria-labelledby="result-heading">
+        <h2 id="result-heading">Sonuç (brüt)</h2>
+        <div id="result" aria-live="polite">
+          <p class="result-empty">Sonucu görmek için aylık brüt ücretinizi veya saatlik ücretinizi ve fazla çalışma saatlerinizi girin.</p>
+        </div>
+        <div class="warn-box" id="warnings" aria-live="polite"></div>
+        <p class="small">Tutarlar kuruşa yuvarlanmıştır. Vergi ve SGK primi düşülmediği için elinize geçecek net tutar daha düşük olur.</p>
+      </section>
+
+      <section class="card app-promo" aria-labelledby="app-heading">
+        <h2 id="app-heading">Saatlerinizi telefonunuzda tutun: VeloHours</h2>
+        <p>Fazla mesaiyi ay sonunda hatırlamaya çalışmak yerine her gün kaydedin. VeloHours, Android için sade bir mesai takip ve puantaj uygulamasıdır: mesaiye tek dokunuşla başlarsınız, ay sonunda hangi gün ne kadar çalıştığınızı ve brüt hakedişinizi görürsünüz.</p>
+        <ul class="features">
+          <li>Tek dokunuşla başlayan ve biten mesai sayacı; mola süresi otomatik düşülür, gece yarısını geçen mesailer de hesaplanır</li>
+          <li>Müşteri veya iş başına saatlik ücret ve isteğe bağlı fazla mesai çarpanı (örneğin 1,5×); uygulama bu çarpanı günde 8 saati aşan sürelere uygular</li>
+          <li>Normal ve fazla mesai saatleriyle brüt hakediş özeti: bu hafta, geçen hafta, bu ay</li>
+          <li>Giriş-çıkış saatli A4 PDF puantaj, Excel'de açılan CSV ve WhatsApp metin özeti</li>
+          <li>Hesap gerekmez, internetsiz çalışır; kayıtlarınız telefonunuzda kalır</li>
+        </ul>
+        <p class="small">Ücretsiz indirilir; 3 PDF puantaj hakkı ve reklam içerir. Pro (abonelik veya tek seferlik satın alma) sınırsız PDF ve reklamsız kullanım sağlar. VeloHours'taki fazla mesai, sizin belirlediğiniz basit bir kurala göre hesaplanır; bordro, vergi veya hukuki danışmanlık değildir.</p>
+        <div class="actions">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.mobilefactory.velohours&amp;referrer=utm_source%3Dweb_tool%26utm_medium%3Dmesai_page%26utm_campaign%3Dweb" target="_blank" rel="noopener">Google Play'den edinin</a>
+        </div>
+        <nav class="sub-links" aria-label="VeloHours bağlantıları">
+          <a href="../velohours.html">Uygulama sayfası</a>
+          <a href="../velohours-privacy.html#tr">Gizlilik politikası</a>
+          <a href="../velohours-terms.html#tr">Kullanım koşulları</a>
+        </nav>
+      </section>
+
+      <article class="card" aria-labelledby="how-heading">
+        <h2 id="how-heading">Fazla mesai nasıl hesaplanır?</h2>
+        <p>4857 sayılı İş Kanunu'nun 41. maddesine göre fazla çalışma, haftalık 45 saati aşan çalışmalardır. Fazla çalışılan her saat için, normal ücretin saat başına düşen miktarı yüzde elli artırılarak ödenir; yani saatlik ücretin 1,5 katı.</p>
+        <p>Sözleşmenizde haftalık çalışma süresi 45 saatin altında belirlenmişse, sözleşme süresini aşan ve 45 saate kadar yapılan çalışmalar <strong>fazla sürelerle çalışma</strong> sayılır. Bu saatler için saatlik ücret yüzde yirmi beş artırılarak, yani 1,25 katıyla ödenir. 45 saati aşan kısım yine 1,5 katıyla ödenen fazla çalışmadır.</p>
+        <p>Hesaplayıcı şu formülleri kullanır:</p>
+        <ul>
+          <li><strong>Saatlik ücret</strong> = aylık brüt ücret ÷ 225 (haftalık 45 saat için)</li>
+          <li><strong>Fazla çalışma ücreti</strong> = saatlik ücret × 1,5 × fazla çalışma saati</li>
+          <li><strong>Fazla sürelerle çalışma ücreti</strong> = saatlik ücret × 1,25 × fazla sürelerle çalışma saati</li>
+          <li><strong>Genel tatil ek ücreti</strong> = aylık brüt ücret ÷ 30 × genel tatilde çalışılan gün</li>
+        </ul>
+        <p>Kanun ayrıca denkleştirmeye izin verir: haftalık çalışma süresinin günlere farklı dağıtıldığı ve ortalama haftalık sürenin aşılmadığı durumlarda, bazı haftalarda 45 saat aşılsa bile bu çalışmalar fazla çalışma sayılmaz (İş Kanunu md. 41 ve 63). İşyerinizde denkleştirme uygulanıyorsa hangi saatlerin fazla çalışma olduğunu bordronuzdan kontrol edin.</p>
+
+        <h2 id="divisor-heading" style="margin-top:28px">225 sayısı nereden geliyor?</h2>
+        <p>Haftalık 45 saat, hafta tatili dışındaki 6 güne bölündüğünde günde 7,5 saat eder. Aylık ücret hafta tatilleri dahil 30 günü karşıladığı için 7,5 × 30 = 225 saat kabul edilir. Bu, uygulamada sık kullanılan bir varsayımdır. Sözleşmeniz 45 saatin altındaysa sayfa aynı mantıkla bölen kullanır: haftalık saat ÷ 6 × 30. Örneğin haftalık 40 saatte bölen 200 olur. Bordronuzda farklı bir bölen kullanılıyorsa saatlik ücretinizi ilgili alana elle girin; hesap o değerle yapılır.</p>
+
+        <h2 id="example-heading" style="margin-top:28px">Örnek hesaplamalar</h2>
+        <ol class="examples">
+          <li><strong>45 saatlik sözleşme, 10 saat fazla mesai.</strong> Aylık brüt ücret 45.000 ₺ ise saatlik ücret 45.000 ÷ 225 = 200 ₺ olur. Fazla mesai ücreti 200 × 1,5 × 10 = <strong>3.000 ₺ brüt</strong>.</li>
+          <li><strong>40 saatlik sözleşme.</strong> Aylık brüt ücret 36.000 ₺, bölen 200, saatlik ücret 180 ₺. Ay içinde 8 saat fazla sürelerle çalışma (40 ile 45 saat arası) ve 4 saat fazla çalışma (45 saatin üstü) varsa: 180 × 1,25 × 8 = 1.800 ₺ ve 180 × 1,5 × 4 = 1.080 ₺; toplam <strong>2.880 ₺ brüt</strong>.</li>
+          <li><strong>Genel tatilde çalışma.</strong> Aylık brüt ücret 45.000 ₺ olan ve 1 genel tatil gününde çalışan biri için ek ücret 45.000 ÷ 30 = <strong>1.500 ₺ brüt</strong>. Aynı ay 6 saat fazla mesai de varsa 200 × 1,5 × 6 = 1.800 ₺ eklenir; toplam 3.300 ₺ brüt.</li>
+        </ol>
+
+        <h2 id="rules-heading" style="margin-top:28px">Bilmeniz gereken diğer kurallar</h2>
+        <ul>
+          <li><strong>Yıllık sınır:</strong> Fazla çalışma süresinin toplamı bir yılda 270 saatten fazla olamaz (İş Kanunu md. 41).</li>
+          <li><strong>Onay:</strong> Fazla saatlerle çalışmak için işçinin onayı alınmalıdır.</li>
+          <li><strong>Ücret yerine serbest zaman:</strong> İşçi isterse zamlı ücret yerine, fazla çalıştığı her saat için 1 saat 30 dakika, fazla sürelerle çalıştığı her saat için 1 saat 15 dakika serbest zaman kullanabilir. Bu serbest zaman altı ay içinde, ücretten kesilmeden kullanılır.</li>
+          <li><strong>Genel tatil:</strong> Ulusal bayram ve genel tatil günlerinde çalışan işçiye, çalışılan her gün için ayrıca bir günlük ücret ödenir (İş Kanunu md. 47).</li>
+          <li><strong>Hafta tatili:</strong> İş Kanunu hafta tatilinde çalışma için ayrı bir zam oranı yazmaz; bu hesaplayıcı da ayrı bir tutar hesaplamaz. O hafta toplam çalışmanız 45 saati aşıyorsa, aşan saatleri fazla çalışma alanına ekleyin. Sözleşmeniz veya toplu iş sözleşmeniz farklı bir ödeme öngörebilir.</li>
+          <li><strong>Özel durumlar:</strong> Yer altı maden işleri gibi bazı işler için Kanun'da farklı kurallar vardır. Toplu iş sözleşmeleri ve iş sözleşmeleri işçiye daha yüksek bir oran tanıyabilir.</li>
+        </ul>
+        <p class="small">Kaynak: 4857 sayılı İş Kanunu md. 41, 47 ve 63 (mevzuat.gov.tr). Bu sayfa genel bilgi verir; durumunuza özel bir değerlendirme için bir uzmana veya avukata danışın.</p>
+      </article>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Sık sorulan sorular</h2>
+        <h3>Fazla mesai ücreti nasıl hesaplanır?</h3>
+        <p>Önce bir saatlik normal ücret bulunur: aylık brüt ücret, haftalık 45 saatlik çalışmada genellikle 225'e bölünür. Haftalık 45 saati aşan her saat için bu saatlik ücretin yüzde elli fazlası, yani 1,5 katı ödenir. Fazla mesai ücreti = saatlik ücret × 1,5 × fazla çalışma saati.</p>
+        <h3>Aylık maaş neden 225'e bölünüyor?</h3>
+        <p>Haftalık 45 saat, hafta tatili dışındaki 6 güne bölündüğünde günde 7,5 saat eder. Aylık ücret 30 günü karşıladığı için 7,5 × 30 = 225 saat kabul edilir. Bu, uygulamada sık kullanılan bir varsayımdır; bordronuzda farklı bir yöntem kullanılıyorsa saatlik ücretinizi hesaplayıcıya elle girebilirsiniz.</p>
+        <h3>Fazla sürelerle çalışma nedir?</h3>
+        <p>Sözleşmenizdeki haftalık çalışma süresi 45 saatin altındaysa, bu süreyi aşan ama 45 saate kadar olan çalışmalar fazla sürelerle çalışmadır. Bu saatler için normal saatlik ücretin yüzde yirmi beş fazlası, yani 1,25 katı ödenir. 45 saati aşan kısım ise fazla çalışmadır ve 1,5 katı ödenir.</p>
+        <h3>Yılda en fazla kaç saat fazla mesai yapılabilir?</h3>
+        <p>4857 sayılı İş Kanunu'nun 41. maddesine göre fazla çalışma süresinin toplamı bir yılda 270 saatten fazla olamaz. Aynı maddeye göre fazla saatlerle çalışmak için işçinin onayı alınmalıdır.</p>
+        <h3>Bayram veya genel tatil gününde çalışınca ne ödenir?</h3>
+        <p>İş Kanunu'nun 47. maddesine göre ulusal bayram ve genel tatil günlerinde tatil yapmayıp çalışan işçiye, o günün ücretine ek olarak çalışılan her gün için bir günlük ücret daha ödenir. Hesaplayıcı bu ek ödemeyi aylık brüt ücretin 30'da biri üzerinden hesaplar.</p>
+        <h3>Hesaplanan tutar net mi, brüt mü?</h3>
+        <p>Brüt. Sonuçlar vergi ve SGK primi düşülmeden önceki tutarlardır; elinize geçecek net tutar daha düşük olur. İş sözleşmeniz, toplu iş sözleşmesi veya işyerinizdeki uygulama farklı bir hesap öngörebilir. Bordronuzu ve sözleşmenizi kontrol edin.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 ObAppStudio · <a href="../index.html">Tüm uygulamalar</a> · <a href="../tools/">Ücretsiz araçlar</a> · <a href="../privacy.html#tr">Stüdyo gizlilik politikası</a> · <a href="mailto:oguzhanbilgidev@gmail.com">oguzhanbilgidev@gmail.com</a></p>
+    </footer>
+  </div>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var form = document.getElementById('calc');
+    var result = document.getElementById('result');
+    var warnings = document.getElementById('warnings');
+    if (!form || !result || !warnings) return;
+
+    var MAX_WEEKLY = 45;
+    var OT_RATE = 1.5;
+    var EXT_RATE = 1.25;
+    var YEARLY_OT_LIMIT = 270;
+
+    var money = new Intl.NumberFormat('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    var plain = new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 2 });
+    function tl(n) { return money.format(n) + ' ₺'; }
+    function num(n) { return plain.format(n); }
+    function round2(n) { return Math.round((n + Number.EPSILON) * 100) / 100; }
+
+    // Turkish number input: "1.234,56", "1234,56", "45.000", "7,5" and "7.5" are all accepted.
+    function parseNumber(raw) {
+      var s = String(raw || '').replace(/[\s ]/g, '').replace(/₺|TL/gi, '');
+      if (s === '') return null;
+      if (!/^[0-9.,]+$/.test(s)) return NaN;
+      if (s.indexOf(',') !== -1) {
+        if (s.indexOf(',') !== s.lastIndexOf(',')) return NaN;
+        var parts = s.split(',');
+        if (parts[0].indexOf('.') !== -1 && !/^\d{1,3}(\.\d{3})+$/.test(parts[0])) return NaN;
+        s = parts[0].replace(/\./g, '') + '.' + parts[1];
+      } else if (/^\d{1,3}(\.\d{3})+$/.test(s)) {
+        s = s.replace(/\./g, '');
+      } else if ((s.match(/\./g) || []).length > 1) {
+        return NaN;
+      }
+      if (s === '.' || s === '') return NaN;
+      var n = Number(s);
+      return isFinite(n) ? n : NaN;
+    }
+
+    // ---------- Safe DOM helpers: only text nodes, never HTML strings. ----------
+    function el(tag, className, children) {
+      var node = document.createElement(tag);
+      if (className) node.className = className;
+      add(node, children);
+      return node;
+    }
+    function add(node, child) {
+      if (child === null || child === undefined || child === false) return;
+      if (Array.isArray(child)) { for (var i = 0; i < child.length; i++) add(node, child[i]); return; }
+      if (typeof child === 'string' || typeof child === 'number') { node.appendChild(document.createTextNode(String(child))); return; }
+      node.appendChild(child);
+    }
+    function clear(node) { while (node.firstChild) node.removeChild(node.firstChild); }
+
+    function readField(name) {
+      var input = form.elements.namedItem(name);
+      var errBox = document.getElementById(name + '-err');
+      var value = parseNumber(input.value);
+      var min = Number(input.getAttribute('data-min') || 0);
+      var message = '';
+      if (value !== null && isNaN(value)) message = 'Geçerli bir sayı girin (örn. 1.234,56).';
+      else if (value !== null && value < min) message = 'Değer ' + num(min) + ' veya daha büyük olmalı.';
+      if (message) {
+        input.setAttribute('aria-invalid', 'true');
+        errBox.textContent = message;
+        return { ok: false, value: null };
+      }
+      input.removeAttribute('aria-invalid');
+      errBox.textContent = '';
+      return { ok: true, value: value };
+    }
+
+    function row(label, calc, amount, className) {
+      return el('tr', className || null, [
+        el('th', null, [label, calc ? el('span', 'calc', calc) : null]),
+        el('td', null, amount)
+      ]);
+    }
+
+    function update() {
+      var monthly = readField('monthly');
+      var hourlyIn = readField('hourly');
+      var weeklyIn = readField('weekly');
+      var ot = readField('otHours');
+      var ext = readField('extHours');
+      var holiday = readField('holidayDays');
+      var notes = [];
+
+      var weekly = weeklyIn.value === null ? MAX_WEEKLY : weeklyIn.value;
+      if (weekly > MAX_WEEKLY) {
+        notes.push('Kanuna göre haftalık çalışma süresi en çok 45 saattir; hesap 45 saat üzerinden yapıldı.');
+        weekly = MAX_WEEKLY;
+      }
+      var extField = document.getElementById('extHours-field');
+      var showExt = weekly < MAX_WEEKLY;
+      extField.hidden = !showExt;
+
+      clear(result);
+      clear(warnings);
+
+      var allOk = monthly.ok && hourlyIn.ok && weeklyIn.ok && ot.ok && ext.ok && holiday.ok;
+      if (!allOk) {
+        add(result, el('p', 'result-empty', 'Hatalı alanları düzeltin; sonuç düzeltmeden sonra görünür.'));
+        return;
+      }
+
+      var divisor = weekly / 6 * 30;
+      var monthlyPay = monthly.value || 0;
+      var hourly = 0;
+      var hourlyCalc = '';
+      if (hourlyIn.value) {
+        hourly = hourlyIn.value;
+        hourlyCalc = 'Girdiğiniz saatlik ücret';
+      } else if (monthlyPay > 0) {
+        hourly = monthlyPay / divisor;
+        hourlyCalc = num(monthlyPay) + ' ₺ ÷ ' + num(divisor);
+      }
+      var daily = monthlyPay > 0 ? monthlyPay / 30 : hourly * weekly / 6;
+      var dailyCalc = monthlyPay > 0 ? num(monthlyPay) + ' ₺ ÷ 30' : tl(round2(hourly)) + ' × ' + num(weekly / 6) + ' saat';
+
+      var otHours = ot.value || 0;
+      var extHours = showExt ? (ext.value || 0) : 0;
+      var days = holiday.value || 0;
+
+      if (!(hourly > 0)) {
+        add(result, el('p', 'result-empty', 'Sonucu görmek için aylık brüt ücretinizi veya saatlik ücretinizi girin.'));
+        return;
+      }
+
+      var otPay = round2(hourly * OT_RATE * otHours);
+      var extPay = round2(hourly * EXT_RATE * extHours);
+      var holidayPay = round2(daily * days);
+      var total = round2(otPay + extPay + holidayPay);
+
+      var rows = [
+        row('Saatlik brüt ücret', hourlyCalc, tl(round2(hourly)))
+      ];
+      rows.push(row('Fazla çalışma ücreti (%50 zamlı)', num(otHours) + ' saat × ' + tl(round2(hourly)) + ' × 1,5', tl(otPay)));
+      if (showExt) rows.push(row('Fazla sürelerle çalışma ücreti (%25 zamlı)', num(extHours) + ' saat × ' + tl(round2(hourly)) + ' × 1,25', tl(extPay)));
+      if (days > 0) {
+        rows.push(row('Genel tatil ek ücreti', num(days) + ' gün × ' + tl(round2(daily)) + ' (' + dailyCalc + ')', tl(holidayPay)));
+      }
+      rows.push(row('Toplam brüt ek ödeme', null, tl(total), 'total'));
+      add(result, el('table', 'result-table', el('tbody', null, rows)));
+
+      if (otHours > YEARLY_OT_LIMIT) {
+        notes.push('Girdiğiniz fazla çalışma saati, Kanun’daki yıllık 270 saatlik sınırı tek başına aşıyor. Saatleri kontrol edin.');
+      }
+      if (!showExt && ext.value) {
+        notes.push('Haftalık sözleşme saati 45 olduğu için fazla sürelerle çalışma hesaba katılmadı.');
+      }
+      if (!monthlyPay && days > 0) {
+        notes.push('Aylık ücret girilmediği için günlük ücret, saatlik ücret × (haftalık saat ÷ 6) olarak varsayıldı.');
+      }
+      for (var i = 0; i < notes.length; i++) add(warnings, el('p', null, notes[i]));
+    }
+
+    form.addEventListener('input', update);
+    form.addEventListener('submit', function (event) { event.preventDefault(); update(); });
+    form.addEventListener('reset', function () { setTimeout(update, 0); });
+    update();
+  })();
+  </script>
+</body>
+</html>

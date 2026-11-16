@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oguzhanbilgi.github.io/obappstudio-legal/sitemap.xml
